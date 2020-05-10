@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="appWhite">#ffffff</color>
+    <color name="mainDividerColor">#d2d1d1</color>
+    <color name="appGreen">#029a02</color>
+    <color name="appOrange">#EC6B38</color>
+    <color name="appYellow">#ecbb38</color>
+    <color name="grayFrameColor">#d2d1d1</color>
+    <color name="appTransparent">#00ffffff</color>
+    <color name="appBlack">#000000</color>
+    <color name="appRed">#ff0000</color>
+    <color name="appGray">#d2d1d1</color>
+
+    <color name="ripple_dark_theme">#33ffffff</color>
+    <color name="ripple_light_theme">#1f000000</color>
+
+    <!--AllActivity-->
+    <color name="activityBackground">#f0f0f0</color>
+
+    <!--Items colors-->
+    <color name="inactiveItem">#e3e3e3</color>
+    <color name="unAvailableButton">#898989</color>
+    <color name="toolbarColor">#2C2C2C</color>
+
+    <!--MainDrawer-->
+    <color name="selectedEquipment">#666666</color>
+
+    <!--RemarkActivity-->
+    <color name="remarkGray">#BABABA</color>
+
+    <!--CheckState-->
+    <color name="uncheckedColor">#BABABA</color>
+    <color name="checkedColor">#ff0000</color>
+
+    <!--TextColor-->
+    <color name="grayText">#BABABA</color>
+    <color name="blueText">#1d6887</color>
+    <color name="greenText">#029a02</color>
+</resources>

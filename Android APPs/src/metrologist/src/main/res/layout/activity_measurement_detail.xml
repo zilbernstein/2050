@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/include_toolbar" />
+
+    <include
+        layout="@layout/include_no_data"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/data"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <TextView
+            android:id="@+id/info_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/measurement_detail_info_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/info_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/white"
+            android:elevation="4dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/info_title">
+
+            <TextView
+                android:id="@+id/section_label"
+                style="@style/Widget.MeasurementDetail.Label"
+                android:text="@string/measurement_detail_section_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/info_group" />
+
+            <TextView
+                android:id="@+id/section_value"
+                style="@style/Widget.MeasurementDetail.Value"
+                app:layout_constraintBottom_toTopOf="@+id/equipment_label"
+                app:layout_constraintStart_toEndOf="@id/section_label"
+                app:layout_constraintTop_toTopOf="@id/info_group"
+                tools:text="264A" />
+
+            <TextView
+                android:id="@+id/equipment_label"
+                style="@style/Widget.MeasurementDetail.Label"
+                android:text="@string/measurement_detail_equipment_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/section_label" />
+
+            <TextView
+                android:id="@+id/equipment_value"
+                style="@style/Widget.MeasurementDetail.Value"
+                app:layout_constraintBottom_toTopOf="@+id/type_name"
+                app:layout_constraintStart_toEndOf="@+id/equipment_label"
+                app:layout_constraintTop_toBottomOf="@id/section_label"
+                tools:text="КП" />
+
+            <TextView
+                android:id="@+id/type_name"
+                style="@style/Widget.MeasurementDetail.Label"
+                android:text="@string/measurement_detail_type_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/equipment_label" />
+
+            <TextView
+                android:id="@+id/type_value"
+                style="@style/Widget.MeasurementDetail.Value"
+                app:layout_constraintBottom_toTopOf="@+id/kind_name"
+                app:layout_constraintStart_toEndOf="@id/type_name"
+                app:layout_constraintTop_toBottomOf="@id/equipment_label"
+                tools:text="обточка КП" />
+
+            <TextView
+                android:id="@+id/kind_name"
+                style="@style/Widget.MeasurementDetail.Label"
+                android:text="@string/measurement_detail_kind_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/type_name" />
+
+            <TextView
+                android:id="@+id/kind_value"
+                style="@style/Widget.MeasurementDetail.Value"
+                app:layout_constraintBottom_toTopOf="@+id/date_time_name"
+                app:layout_constraintStart_toEndOf="@id/kind_name"
+                app:layout_constraintTop_toBottomOf="@id/type_name"
+                tools:text="до обточки" />
+
+            <TextView
+                android:id="@+id/date_time_name"
+                style="@style/Widget.MeasurementDetail.Label"
+                android:text="@string/measurement_detail_date_time_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/kind_name" />
+
+            <TextView
+                android:id="@+id/date_time_value"
+                style="@style/Widget.MeasurementDetail.Value"
+                android:width="120dp"
+                android:background="@drawable/bg_edit_text_measurement_detail"
+                android:gravity="center_horizontal"
+                android:textColor="@color/text_default_normal"
+                app:layout_constraintBottom_toTopOf="@+id/separate_line_one"
+                app:layout_constraintStart_toEndOf="@id/date_time_name"
+                app:layout_constraintTop_toBottomOf="@+id/kind_value"
+                tools:text="14.08.2019 / 15:03" />
+
+            <View
+                android:id="@+id/separate_line_one"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/mainDividerColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/date_time_name" />
+
+            <TextView
+                android:id="@+id/tool_measurement"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:drawableStart="@drawable/ic_text_view_choice"
+                android:gravity="center_vertical"
+                android:text="@string/measurement_detail_instrument_name"
+                android:textColor="@color/text_default_normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/separate_line_one" />
+
+            <TextView
+                android:id="@+id/profilometer_label"
+                style="@style/Widget.MeasurementDetail.Label"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/measurement_detail_profilometr_name"
+                app:layout_constraintBottom_toTopOf="@id/separate_line_two"
+                app:layout_constraintEnd_toStartOf="@id/profilometer_value"
+                app:layout_constraintTop_toBottomOf="@id/separate_line_one" />
+
+            <TextView
+                android:id="@+id/profilometer_value"
+                style="@style/Widget.MeasurementDetail.Value"
+                android:background="@drawable/bg_edit_text_measurement_detail"
+                android:gravity="center"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                app:layout_constraintBottom_toTopOf="@id/separate_line_two"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/separate_line_one"
+                tools:text="IKP 03919" />
+
+            <View
+                android:id="@+id/separate_line_two"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/mainDividerColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tool_measurement" />
+
+            <TextView
+                android:id="@+id/manual_measurement"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:drawableStart="@drawable/ic_text_view_choice"
+                android:gravity="center_vertical"
+                android:text="@string/measurement_detail_handmade_name"
+                android:textColor="@color/text_default_normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/separate_line_two" />
+
+            <TextView
+                android:id="@+id/worker_label"
+                style="@style/Widget.MeasurementDetail.Label"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/measurement_detail_worker_position"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/worker_value"
+                app:layout_constraintTop_toBottomOf="@id/separate_line_two" />
+
+            <TextView
+                android:id="@+id/worker_value"
+                style="@style/Widget.MeasurementDetail.Value"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/separate_line_two"
+                tools:text="Иванов И.И." />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/data_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/measurement_detail_data_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/info_group"
+            tools:text="Данные замера" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/params_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/appWhite"
+            app:layout_constraintBottom_toTopOf="@id/btn_detail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/data_title"
+            tools:listitem="@layout/item_measurement_param" />
+
+        <Button
+            android:id="@+id/btn_detail"
+            style="@style/Widget.App.Button.Green"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/measurement_detail_btn_detail"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

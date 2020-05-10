@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:elevation="2dp"
+    android:background="@color/appWhite"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/include_message_whom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/appBlack"
+        android:text="@string/message_activity_whom"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/include_message_recipient"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/appBlack"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include_message_whom"
+        tools:text="Иванов Иван, Сергеев Сергей(14 чел.)" />
+
+    <View
+        android:id="@+id/include_message_view_separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/message_divider_color"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include_message_recipient" />
+
+
+    <TextView
+        android:id="@+id/include_message_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/appBlack"
+        app:layout_constraintBottom_toTopOf="@+id/include_message_view_down_separator"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include_message_view_separator"
+        tools:text="По своей сути служебная записка ‒ инструмент деловой корреспонденции внутри организации, между сотрудниками, не находящимися в подчинении друг у друга. В том случае, если сотрудник пишет записку вышестоящему лицу, она будет называться не служебной, а докладной. Цель записки – объяснить и согласовать аспекты деловых вопросов касательно работы сотрудника или отдела, и связанных с работой другого сотрудника или отдела. Записка пишется в тех случаях, когда устного общения недостаточно и просьбу необходимо задокументировать. Следует заметить, что служебная записка является только вспомогательным документом, не регламентированным ОКУД. Поэтому вся информация в служебных записках не содержит приказов и распоряжений." />
+
+    <View
+        android:id="@+id/include_message_view_down_separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/message_divider_color"
+        app:layout_constraintBottom_toTopOf="@+id/include_message_send"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <TextView
+        android:id="@+id/include_message_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="64dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/message_activity_send"
+        android:textAllCaps="true"
+        android:textColor="@color/appBlack"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

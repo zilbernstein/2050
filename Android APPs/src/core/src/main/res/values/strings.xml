@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Core</string>
+
+    <!--AuthActivity-->
+    <string name="authoriztion_activity_password_length_error">Длина пароля должна быть не менее 4 символов</string>
+    <string name="authoriztion_activity_username_length_error">Длина имени пользователя должна быть не менее 4 символов</string>
+    <string name="authoriztion_activity_username_symbol_error">Имя пользователя может содеражть только буквы и цифры</string>
+    <string name="authoriztion_activity_password_symbol_error">Пароль может содержать только цифры</string>
+    <string name="authorization_activity_error_no_user">Пользователь с таким сочетанием имени и пароля не найден</string>
+
+    <!--MeasurementDetailActivity-->
+    <string name="measurement_detail_btn_detail">Замер детально</string>
+    <string name="measurement_detail_info_title">Информация о замере</string>
+    <string name="measurement_detail_section_name">Секция:</string>
+    <string name="measurement_detail_equipment_name">Оборудование:</string>
+    <string name="measurement_detail_type_name">Тип замера:</string>
+    <string name="measurement_detail_kind_name">Вид замера:</string>
+    <string name="measurement_detail_date_time_name">Дата и время:</string>
+    <string name="measurement_detail_instrument_name">Замер приборный</string>
+    <string name="measurement_detail_profilometr_name">Профилометр:</string>
+    <string name="measurement_detail_handmade_name">Замер ручной</string>
+    <string name="measurement_detail_worker_position">Техник:</string>
+    <string name="measurement_detail_data_title">Данные замера</string>
+
+    <!--SettingsActivity-->
+    <string name="settings_title">Настройки</string>
+    <string name="settings_apply">Принять</string>
+    <string name="settings_defaults_title">Список адресов по умолчанию</string>
+
+    <!--AppBooleanSelectDialog-->
+    <string name="app_boolean_select_true">Да</string>
+    <string name="app_boolean_select_false">Нет</string>
+    <string name="app_boolean_select_null">Не выбрано</string>
+
+    <string name="send_report_title">Отправка отчета</string>
+    <string name="email_label">Укажите e-mail получателя:</string>
+    <string name="email_hint">E-mail</string>
+    <string name="btn_cancel">Отмена</string>
+    <string name="btn_send">Отправить</string>
+
+    <!--NotificationHelper-->
+    <string name="notification_helper_default_channel_id">default_channel</string>
+    <string name="notification_helper_default_channel_name">По умолчанию</string>
+    <string name="notification_helper_default_channel_description">По умолчанию</string>
+
+    <!--CoreNavigator-->
+    <string name="core_navigator_no_web_client">Приложение не найдено</string>
+
+    <string name="boolean_editor_positive">Да</string>
+    <string name="boolean_editor_negative">Нет</string>
+
+    <!--    -->
+    <string name="sections_status_all">ВСЕ</string>
+    <string name="sections_status_waiting">В ОЖИДАНИИ</string>
+    <string name="sections_status_in_service">НА ОБСЛУЖИВАНИИ</string>
+
+</resources>

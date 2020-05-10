@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/info_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/measurement_detail_info_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ru.digipeople.locotech.metrologist.ui.view.MeasurementInfoView
+                android:id="@+id/measurement_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/white"
+                android:elevation="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/info_title" />
+
+            <TextView
+                android:id="@+id/kp_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/measurement_info"
+                tools:text="КП 12312939139193193" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/axis_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_white_with_padding"
+                android:elevation="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kp_title">
+
+                <TextView
+                    android:id="@+id/axis_number_label"
+                    style="@style/Widget.MeasurementDetail.WheelPairLabel"
+                    android:text="@string/edit_measurement_number_wheel"
+                    app:layout_constraintEnd_toStartOf="@id/axis_number_value"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/axis_number_value"
+                    style="@style/Widget.MeasurementDetail.WheelPairValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintBottom_toBottomOf="@id/axis_number_label"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/axis_number_label"
+                    app:layout_constraintTop_toTopOf="@id/axis_number_label"
+                    tools:text="12354311231" />
+
+                <ImageView
+                    android:id="@+id/axis_number_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_wheels"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/axis_number_label" />
+
+                <TextView
+                    android:id="@+id/axis_count_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textSize="35sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/axis_number_image"
+                    app:layout_constraintEnd_toEndOf="@+id/axis_number_image"
+                    app:layout_constraintStart_toStartOf="@+id/axis_number_image"
+                    app:layout_constraintTop_toTopOf="@+id/axis_number_image"
+                    tools:text="1" />
+
+                <TextView
+                    android:id="@+id/flange_left_number_label"
+                    style="@style/Widget.MeasurementDetail.WheelPairLabel"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/edit_measurement_flange_left_number_label"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/axis_number_image" />
+
+                <TextView
+                    android:id="@+id/flange_left_number_value"
+                    style="@style/Widget.MeasurementDetail.WheelPairValue"
+                    app:layout_constraintBottom_toBottomOf="@+id/flange_left_number_label"
+                    app:layout_constraintStart_toEndOf="@id/flange_left_number_label"
+                    app:layout_constraintTop_toTopOf="@+id/flange_left_number_label"
+                    tools:text="12312412" />
+
+                <TextView
+                    android:id="@+id/flange_right_number_label"
+                    style="@style/Widget.MeasurementDetail.WheelPairLabel"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/edit_measurement_flange_right_number_label"
+                    app:layout_constraintEnd_toStartOf="@id/flange_right_number_value"
+                    app:layout_constraintTop_toBottomOf="@id/axis_number_image" />
+
+                <TextView
+                    android:id="@+id/flange_right_number_value"
+                    style="@style/Widget.MeasurementDetail.WheelPairValue"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintBottom_toBottomOf="@id/flange_right_number_label"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/flange_right_number_label"
+                    tools:text="12312412" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/parametr_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:clipToPadding="false"
+                    android:paddingBottom="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/flange_left_number_label"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/item_wheel_param" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

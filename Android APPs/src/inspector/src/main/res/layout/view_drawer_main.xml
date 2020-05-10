@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/appWhite"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainDrawer"
+        android:layout_width="350dp"
+        android:layout_height="match_parent"
+        android:background="@color/appWhite">
+
+        <ImageView
+            android:id="@+id/drawer_main_logo"
+            android:layout_width="256dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="16dp"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_logo_inspector" />
+
+        <TextView
+            android:id="@+id/drawer_main_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:textColor="@color/appBlack"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/drawer_main_logo" />
+
+        <TextView
+            android:id="@+id/drawer_main_sld"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="4dp"
+            android:text="СЛД Братское"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/drawer_main_name" />
+
+        <TextView
+            android:id="@+id/drawer_main_equipment_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@color/selectedEquipment"
+            android:gravity="center_vertical"
+            android:paddingLeft="40dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:text="@string/main_drawer_equipment_not_chosen"
+            android:textColor="@color/appWhite"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/drawer_main_sld" />
+
+        <TextView
+            android:id="@+id/drawer_main_inspection"
+            style="@style/Widget.App.MainDrawer.MenuItem"
+            android:drawableStart="@drawable/ic_icon_control"
+            android:paddingStart="80dp"
+            android:text="@string/main_drawer_inspection"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/drawer_main_equipment_value" />
+
+        <TextView
+            android:id="@+id/drawer_main_repair_book"
+            style="@style/Widget.App.MainDrawer.MenuItem"
+            android:drawableStart="@drawable/ic_icon_book"
+            android:paddingStart="80dp"
+            android:text="@string/main_drawer_repair_book"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/drawer_main_inspection" />
+
+        <TextView
+            android:id="@+id/drawer_main_check_list"
+            style="@style/Widget.App.MainDrawer.MenuItem"
+            android:drawableStart="@drawable/ic_icon_check_list"
+            android:paddingStart="80dp"
+            android:text="@string/main_drawer_сheck_list"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/drawer_main_repair_book" />
+
+        <TextView
+            android:id="@+id/drawer_main_unit_info"
+            style="@style/Widget.App.MainDrawer.MenuItem"
+            android:drawableStart="@drawable/ic_icon_table"
+            android:paddingStart="80dp"
+            android:text="@string/main_drawer_unit_info"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/drawer_main_check_list" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/info_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="drawer_main_unit_info, drawer_main_check_list,drawer_main_repair_book, drawer_main_inspection" />
+
+        <TextView
+            android:id="@+id/drawer_main_message"
+            style="@style/Widget.App.MainDrawer.MenuItem"
+            android:drawableStart="@drawable/ic_icon_message"
+            android:paddingStart="40dp"
+            android:text="@string/main_drawer_message"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/drawer_main_unit_info" />
+
+        <TextView
+            android:id="@+id/drawer_main_phonebook"
+            style="@style/Widget.App.MainDrawer.MenuItem"
+            android:drawableStart="@drawable/ic_icon_phone"
+            android:paddingStart="40dp"
+            android:text="@string/main_drawer_phonebook"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/drawer_main_message" />
+
+        <TextView
+            android:id="@+id/drawer_main_exit"
+            style="@style/Widget.App.MainDrawer.MenuItem"
+            android:layout_height="53dp"
+            android:layout_marginTop="20dp"
+            android:drawableStart="@drawable/ic_icon_exit"
+            android:paddingStart="40dp"
+            android:text="@string/main_drawer_exit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/drawer_main_phonebook" />
+
+        <TextView
+            android:id="@+id/drawer_main_version"
+            style="@style/Widget.App.MainDrawer.MenuItem"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"
+            android:padding="0dp"
+            android:text="@string/main_drawer_version"
+            android:textColor="@color/remarkGray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/drawer_main_exit"
+            app:layout_constraintVertical_bias="0.733" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

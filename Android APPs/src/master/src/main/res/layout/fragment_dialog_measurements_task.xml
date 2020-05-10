@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:background="@android:drawable/dialog_holo_light_frame">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+
+        <EditText
+            android:id="@+id/section_number_input"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/measurements_task_dialog_position_number"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="@string/measurements_task_dialog_measurement_type"
+            app:layout_constraintBottom_toBottomOf="@+id/measurement_stage_list"
+            app:layout_constraintEnd_toStartOf="@+id/measurement_stage_list"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/measurement_stage_list" />
+
+        <Spinner
+            android:id="@+id/measurement_stage_list"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/section_number_input"
+            tools:layout_editor_absoluteX="202dp" />
+
+        <Button
+            android:id="@+id/positive_btn"
+            style="@style/Widget.App.Button.Green"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="@string/measurements_task_dialog_positive"
+            app:layout_constraintBottom_toBottomOf="@+id/negative_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/negative_btn" />
+
+        <Button
+            android:id="@+id/negative_btn"
+            style="@style/Widget.App.Button.Red"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/measurements_task_dialog_negative"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/measurement_stage_list" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

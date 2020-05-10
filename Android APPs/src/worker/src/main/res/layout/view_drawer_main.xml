@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/appWhite"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainDrawer"
+        android:layout_width="256dp"
+        android:layout_height="match_parent"
+        android:background="@color/appWhite">
+
+        <FrameLayout
+            android:id="@+id/logo_layout"
+            android:layout_width="0dp"
+            android:layout_height="96dp"
+            android:background="@color/appRed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/drawer_main_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="32dp"
+                android:src="@drawable/logo_side" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/drawer_main_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:drawableLeft="@drawable/ic_icon_worker"
+            android:drawablePadding="16dp"
+            android:ellipsize="end"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo_layout" />
+
+        <TextView
+            android:id="@+id/drawer_main_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:paddingLeft="32dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="16dp"
+            android:textColor="@color/appWhite"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/drawer_main_name" />
+
+        <TextView
+            android:id="@+id/drawer_main_my_task"
+            style="@style/Widget.App.MainDrawer.MenuItem"
+            android:drawableLeft="@drawable/ic_icon_my_task"
+            android:text="@string/main_drawer_my_work"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/drawer_main_status" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/drawer_main_task_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/drawer_main_my_task">
+
+            <ImageView
+                android:id="@+id/drawer_main_task_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_icon_task" />
+
+            <TextView
+                android:id="@+id/drawer_main_task"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:drawablePadding="16dp"
+                android:gravity="start|center_vertical"
+                android:text="@string/main_drawer_task"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@id/drawer_main_current_task"
+                app:layout_constraintLeft_toRightOf="@id/drawer_main_task_icon"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/drawer_main_current_task"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="start|center_vertical"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/drawer_main_task_icon"
+                app:layout_constraintTop_toBottomOf="@id/drawer_main_task" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/drawer_main_message"
+            style="@style/Widget.App.MainDrawer.MenuItem"
+            android:drawableStart="@drawable/ic_icon_message"
+            android:text="@string/main_drawer_message"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/drawer_main_task_layout" />
+
+        <TextView
+            android:id="@+id/drawer_main_telephone_book"
+            style="@style/Widget.App.MainDrawer.MenuItem"
+            android:drawableStart="@drawable/ic_icon_phone"
+            android:text="@string/main_drawer_telephones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/drawer_main_message" />
+
+        <TextView
+            android:id="@+id/drawer_main_plan_bik"
+            style="@style/Widget.App.MainDrawer.MenuItem"
+            android:drawableStart="@drawable/ic_plan_bik"
+            android:text="@string/main_drawer_plan_bik"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/drawer_main_telephone_book" />
+
+        <TextView
+            android:id="@+id/drawer_main_settings"
+            style="@style/Widget.App.MainDrawer.MenuItem"
+            android:drawableLeft="@drawable/ic_icon_settings"
+            android:text="@string/main_drawer_settings"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/drawer_main_telephone_book" />
+
+        <View
+            android:id="@+id/drawer_main_separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/gray_divider"
+            app:layout_constraintTop_toBottomOf="@+id/drawer_main_plan_bik" />
+
+
+        <TextView
+            android:id="@+id/drawer_main_exit"
+            style="@style/Widget.App.MainDrawer.MenuItem"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/ic_icon_exit"
+            android:text="@string/main_drawer_exit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/drawer_main_separator" />
+
+
+        <TextView
+            android:id="@+id/drawer_main_version"
+            style="@style/Widget.App.MainDrawer.MenuItem"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"
+            android:padding="0dp"
+            android:text="@string/main_drawer_version"
+            android:textColor="@color/remarkGray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/drawer_main_exit"
+            app:layout_constraintVertical_bias="0.733" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

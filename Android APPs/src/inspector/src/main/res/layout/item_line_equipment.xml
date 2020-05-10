@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/line_equipment_main_info"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="72dp"
+    android:background="@color/appWhite">
+
+    <TextView
+        android:id="@+id/line_equipment_title"
+        style="@style/ItemLocomotiveTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:padding="16dp"
+        android:textColor="@color/appBlack"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/locomotive_time_guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Локомотив 2х2ЭС5К" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/locomotive_time_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <TextView
+        android:id="@+id/line_equipment_time"
+        style="@style/ItemLocomotiveTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:textColor="@color/appBlack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/locomotive_time_guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="01:15:15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/locomotive_progress_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <ProgressBar
+        android:id="@+id/line_equipment_progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="255dp"
+        android:layout_height="18dp"
+        android:progressDrawable="@drawable/green_progress_bar_drawable"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/locomotive_progress_guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:progress="50" />
+
+    <TextView
+        android:id="@+id/line_equipment_percent"
+        style="@style/ItemLocomotiveTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="64dp"
+        android:textColor="@color/appBlack"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/line_equipment_progress_bar"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="56%" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/comment"
+        android:icon="@drawable/ic_message"
+        android:orderInCategory="1"
+        android:title="@string/locomotive_details_item_menu_comment" />
+
+    <item
+        android:id="@+id/tmc"
+        android:orderInCategory="3"
+        android:icon="@drawable/ic_tools"
+        android:title="@string/locomotive_details_item_menu_tmc" />
+
+    <item
+        android:id="@+id/photo"
+        android:orderInCategory="2"
+        android:icon="@drawable/ic_photo_frame"
+        android:title="@string/locomotive_details_item_menu_photo"/>
+
+    <item
+        android:id="@+id/partly_accepted"
+        android:orderInCategory="4"
+        android:icon="@drawable/ic_priyomka"
+        android:title="@string/locomotive_details_item_menu_accept_partly"
+        />
+    <item
+        android:id="@+id/measurement"
+        android:orderInCategory="4"
+        android:icon="@drawable/ic_zam"
+        android:title="@string/locomotive_details_item_menu_measurement"
+        />
+
+</menu>

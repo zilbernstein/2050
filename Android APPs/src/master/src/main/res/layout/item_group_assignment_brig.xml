@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:background="?attr/selectableItemBackground">
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="@style/PerformerSearchProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:progressDrawable="@drawable/performer_search_green_progress_bar"
+        tools:progress="72" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/item_performer_name"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="16dp"
+        android:gravity="center_vertical"
+        android:paddingStart="8dp"
+        android:textColor="@color/appBlack"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/item_performer_percent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Сидоров Сидор Сидорович" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/item_performer_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:gravity="center"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:textColor="@color/appBlack"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/item_performer_group_check"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="72%" />
+
+    <ImageView
+        android:id="@+id/item_performer_group_check"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginRight="32dp"
+        android:padding="5dp"
+        android:src="@drawable/checkbox_green_selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

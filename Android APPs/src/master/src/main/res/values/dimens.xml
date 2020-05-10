@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dialog_settings_width">758dp</dimen>
+    <dimen name="dialog_settings_height">512dp</dimen>
+</resources>

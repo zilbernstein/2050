@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#1D1D1D</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <!--AllActivity-->
+    <color name="activityBackground">#f0f0f0</color>
+
+    <!--MainDrawer-->
+    <color name="appGray">#d2d1d1</color>
+    <color name="nameColor">#9E9E9E</color>
+
+    <!--ApproveFragment-->
+    <color name="appBlue">#03A9F4</color>
+
+    <!--InactiveCard-->
+    <color name="inactiveItem">#e3e3e3</color>
+
+    <color name="photoToolbar">#2C2C2C</color>
+
+</resources>

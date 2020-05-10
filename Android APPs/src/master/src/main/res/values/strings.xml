@@ -1,0 +1,365 @@
+<resources>
+    <!--EquipmentActivity-->
+    <string name="locomotive_activity_title">Локомотивы на участке</string>
+    <string name="locomotive_activity_percent">%1$d%%</string>
+    <string name="locomotive_activity_locomotive_title">%1$s %2$s </string>
+    <string name="locomotive_activity_section_title">%1$s %2$s%3$s</string>
+    <string name="item_section">(%s)</string>
+
+    <!--StatusActivity-->
+    <string name="status_activity_title">Статус работ</string>
+
+    <!--PerformanceActivity-->
+    <string name="performance_title">Исполнение %1$s</string>
+    <string name="performance_other_performers_amount">+ %1$x чел.</string>
+    <string name="performance_filter_tmc">Наличие ТМЦ</string>
+    <string name="performance_filter_measurements">Наличие замеров</string>
+    <string name="performance_filter_mpi">Наличие МПИ</string>
+
+    <!--UrgentActivity-->
+    <string name="urgent_activity_title">Срочно</string>
+    <string name="urgent_activity_status_expired">%1$s (Просрочена)</string>
+    <string name="urgent_activity_status_paused">%1$s (Приостановлена)</string>
+    <string name="urgent_activity_status_done">%1$s (Выполнена)</string>
+    <string name="urgent_activity_equipment">Локомотив/секция: %1$s</string>
+    <string name="urgent_activity_restart">Возобновить</string>
+    <string name="urgent_activity_stop">Завершить</string>
+    <string name="urgent_activity_return">Отменить выполнение</string>
+    <string name="urgent_activity_accept">Принять</string>
+    <string name="urgent_other_performers_amount">+ %1$x чел.</string>
+
+    <!--ApprovedActivity-->
+    <string name="approved_activity_title">Согласование</string>
+    <string name="approved_activity_approved">На согласовании</string>
+    <string name="approved_activity_not_approved">Несогласованные</string>
+    <string name="approved_activity_select_all">Выбрать все</string>
+    <string name="approved_activity_approve_all">Отправить на согласование</string>
+    <string name="approved_activity_start">Запустить</string>
+    <string name="approved_activity_approve_error">Нет работ для согласования</string>
+    <string name="approved_activity_run_error">Нет работ для исполнения</string>
+    <string name="approved_activity_performers_amount">+ %1$x чел.</string>
+
+    <!--RemarkSearchActivity-->
+    <string name="remark_search_title">Добавление замечания. Выбор замечания</string>
+    <string name="remark_search_empty_remark_error">Невозможно создать замечание без названия</string>
+    <string name="remark_search_back_step">Вернуться на предыдущий шаг</string>
+
+    <!--RemarkDetailActivity-->
+    <string name="remark_detail_title"></string>
+    <string name="remark_detail_add_work">Добавить работу</string>
+
+    <!--SearchPerformerActivity-->
+    <string name="search_performer_title">Добавление замечания. Выбор Исполнителей</string>
+    <string name="search_performer_title_perf">Выбор сотрудников</string>
+    <string name="search_performer_outfit_time">%1$s / %2$s / %3$d%%</string>
+    <string name="search_performer_outfit_normal">Норма: %1$s</string>
+    <string name="search_performer_outfit_title">Наряд %1$s:</string>
+    <string name="search_performer_add">Прикрепить выбранных исполнителей</string>
+    <string name="search_performer_mistake">Произошла ошибка</string>
+    <string name="search_performer_overload_mistake">У одного или нескольких исполнителей нагрузка более 150%%</string>
+    <string name="search_performer_null_shift_mistake">У данного исполнителя не установлена продолжительность смены</string>
+    <string name="search_performer_percent">%1$d%%</string>
+
+    <!--WorkListActivity-->
+    <string name="work_list_title">Добавление замечания. Добавление работ</string>
+    <string name="work_list_title_pure">Добавление работ</string>
+    <string name="work_list_back_step">Назад</string>
+    <string name="work_list_add_remark">Продолжить</string>
+    <string name="work_list_performers_amount">+ %1$x чел.</string>
+    <string name="work_list_empty_result">По введенному запросу\nничего не найдено</string>
+
+    <!--RemarkActivity-->
+    <string name="locomotive_details_title">Замечания</string>
+    <string name="locomotive_details_item_menu_add_performer">Исполнители</string>
+    <string name="locomotive_details_remark_title">Замечания</string>
+    <string name="locomotive_details_item_menu_comment">Комментарий</string>
+    <string name="locomotive_details_item_menu_photo">Фотографии</string>
+    <string name="locomotive_details_item_menu_accept_partly">Принять частично</string>
+    <string name="locomotive_details_item_menu_divide">Разделить</string>
+    <string name="locomotive_details_item_menu_measurement">Замеры</string>
+    <string name="locomotive_details_item_menu_message">Сообщение</string>
+    <string name="locomotive_details_item_menu_delete">Удалить</string>
+    <string name="locomotive_details_item_menu_tmc">ТМЦ</string>
+    <string name="locomotive_details_item_sort_performer">Исполнитель</string>
+    <string name="locomotive_details_item_sort_urgency">Срочность</string>
+    <string name="locomotive_details_item_sort_title">Название работ</string>
+    <string name="locomotive_details_item_comment_mistake">Комментарии доступны в полной верии приложения</string>
+    <string name="locomotive_details_item_create_work_mistake">Создание работ доступно в полной верии приложения</string>
+    <string name="locomotive_dateils_performers_amount">+ %1$x чел.</string>
+    <string name="locomotive_details_item_menu_workaround">Обходное решение</string>
+    <string name="remark_activity_percent">%1$d%%</string>
+    <string name="delete_work_dialog">Вы уверены, что хотите удалить работу из замечания?</string>
+
+    <!--SettingsActivity-->
+    <string name="settings_activity_title">Настройки</string>
+    <string name="settings_sorting_order">Порядок сортировки:</string>
+    <string name="settings_sorting_priority">По приоритету</string>
+    <string name="settings_sorting_term">По сроку</string>
+    <string name="settings_sorting_change_date">По дате последних изменений</string>
+
+    <!--MainDrawerView-->
+    <string name="main_drawer_name">%1$s %2$s</string>
+    <string name="main_drawer_equipment">Текущий локомотив/секция</string>
+    <string name="main_drawer_equipment_not_chosen">Не выбрано</string>
+    <string name="main_drawer_equipment_item">Локомотивы</string>
+    <string name="main_drawer_status">Замечания</string>
+    <string name="main_drawer_approvance">Согласование</string>
+    <string name="main_drawer_perfomance">Исполнение</string>
+    <string name="main_drawer_assignment">Назначение</string>
+    <string name="main_drawer_urgency">Срочно</string>
+    <string name="main_drawer_order_to_repair">Запрос на получение ТМЦ для ремонта</string>
+    <string name="main_drawer_settings">Настройки</string>
+    <string name="main_drawer_exit">Выход</string>
+    <string name="main_drawer_version">Версия %1$s</string>
+    <string name="main_drawer_telephones">Телефоны</string>
+    <string name="maximum_alert_count">99+</string>
+    <string name="main_drawer_plan_bik">План БИК</string>
+
+    <!--CheckWorkActivity-->
+    <string name="check_work_title_run">Запустить</string>
+    <string name="check_work_title_approve">Согласовать</string>
+    <string name="check_work_allert_run">Проверьте работу перед запуском!</string>
+    <string name="check_work_allert_approve">Проверьте работы перед согласованием!</string>
+    <string name="check_work_allert_aссept">Проверьте работы перед приемкой!</string>
+    <string name="check_work_button_run">Запустить</string>
+    <string name="check_work_button_approve">Согласовать</string>
+    <string name="check_work_button_aссept">Принять</string>
+    <string name="check_work_performers_amount">+ %1$x чел.</string>
+
+    <!--AllWorkActivity-->
+    <string name="all_work_title">Добавление замечания. Добавление работ</string>
+    <string name="all_work_title_pure">Добавление работ</string>
+    <string name="all_work_add_btn_title">Добавить работы</string>
+
+    <!--CommentDialogFragment-->
+    <string name="comment_dialog_hint">Текст комментария</string>
+    <string name="comment_dialog_cancel">Отмена</string>
+    <string name="comment_dialog_ready">Готово</string>
+    <string name="comment_dialog_mistake">Возможность оставлять коментарий появится в полной весии приложения</string>
+
+    <!--CustomRemarkDialog-->
+    <string name="custom_remark_dialog_title">Вы действительно хотите добавить замечание?</string>
+    <string name="custom_remark_dialog_agree">Да</string>
+    <string name="custom_remark_dialog_canceled">Отмена</string>
+
+    <!--CardPerformance-->
+    <string name="card_performance_apply">Принять</string>
+    <string name="card_performance_return">Отменить выполнение</string>
+    <string name="card_performance_percent">%1$d%%</string>
+    <string name="card_performance_max_visible_percent">999+%</string>
+    <string name="card_performance_norm"><b>Норма:</b> %s (%s%%)</string>
+    <string name="card_performance_measurements"><b>Замеры:</b> %s</string>
+    <string name="card_performance_time_remain">%s / %s</string>
+    <string name="card_performance_outfit_number">%s:  </string>
+
+    <!--PerformanceActivity-->
+    <string name="performance_activity_sort_new">Нет исполнителя</string>
+    <string name="performance_activity_sort_in_task">Назначены</string>
+    <string name="performance_activity_sort_performancing">Выполняются</string>
+    <string name="performance_activity_sort_finished">Завершены</string>
+    <string name="performance_activity_sort_accepted">Приняты мастером</string>
+    <string name="performance_activity_sort_all">Все</string>
+    <string name="performance_activity_accept_all">Принять все</string>
+    <string name="performance_activity_start_all">Запустить все</string>
+    <string name="performance_activity_performance_mistake">Для замены исполнителя требуется приостановить работу</string>
+    <string name="performance_activity_stop">Завершить</string>
+    <string name="performance_activity_start">Запустить</string>
+    <string name="performance_activity_accept">Принять</string>
+    <string name="performance_activity_return">Отменить выполнение</string>
+    <string name="performance_activity_in_work">В работу</string>
+    <string name="performance_activity_start_time">00:00:00</string>
+    <string name="performance_activity_accept_all_mistake">Невозможно принять пустой список работ</string>
+    <string name="performance_activity_start_all_work_mistake">Невозможно запустить пустой список работ</string>
+    <string name="performance_activity_start_work_mistake">Невозможно запустить работу без исполнителей</string>
+    <string name="performance_activity_status_new">Новая</string>
+    <string name="performance_activity_status_in_task">В ожидании</string>
+    <string name="performance_activity_status_paused">Приостановлена</string>
+    <string name="performance_activity_status_in_work">В работе</string>
+    <string name="performance_activity_status_cancelled">Отказ работника</string>
+    <string name="performance_activity_status_done">Готово</string>
+    <string name="performance_activity_status_stopped">Остановлена</string>
+    <string name="performance_activity_status_accepted">Принята</string>
+    <string name="performance_activity_switch_equipment">Сменить секцию</string>
+    <string name="performance_activity_sort_in_approve">На согласовании</string>
+    <string name="performance_activity_status_in_approve">На согласовании</string>
+
+    <!--CommentActivity-->
+    <string name="comment_activity_input_comment">Ввод комментария</string>
+    <string name="comment_activity_return_reason">Укажите причину возврата</string>
+
+    <!--TmcList Activity -->
+    <string name="tmc_list_activity_title">%1$s. Список ТМЦ</string>
+    <string name="tmc_list_activity_last_name">Фамилия получателя</string>
+    <string name="tmc_list_activity_tmc_name">Наименование ТМЦ</string>
+    <string name="tmc_list_activity_amount_asked">Затребовано</string>
+    <string name="tmc_list_activity_amount_normal">Норма</string>
+    <string name="tmc_list_activity_amount_section_left">Остаток\nЛогимат</string>
+    <string name="tmc_list_activity_amount_stock_left">Остаток\n склада</string>
+    <string name="tmc_list_activity_amount_min">МИН</string>
+    <string name="tmc_list_activity_amount_max">МАКС</string>
+    <string name="tmc_list_activity_amount_mnk">МНК</string>
+    <string name="tmc_list_activity_orered">Заказано</string>
+    <string name="tmc_list_activity_received">Получено</string>
+    <string name="tmc_list_activity_compiled">Собрано</string>
+    <string name="tmc_list_activity_refused">Отказано</string>
+    <string name="tmc_list_activity_warning">Вы уверены что хотите удалить ТМЦ?</string>
+
+    <!--TmcSearch Activity -->
+    <string name="tmc_search_activity_section">Остаток\nЛогимат</string>
+    <string name="tmc_search_activity_stock">Остаток\nсклада</string>
+    <string name="tmc_search_no_result">По Вашему запросу ничего не найдено</string>
+
+    <!--TmcAmount Activity-->
+    <string name="tmc_amount_hint">Введите количество</string>
+    <string name="tmc_amount_section">Остаток\nучастка</string>
+    <string name="tmc_amount_stock">Остаток\nсклада</string>
+
+    <!--TmcBeforeAccept-->
+    <string name="tmc_before_accept_title">Списание ТМЦ</string>
+    <string name="tmc_before_accept_write_off">Принять</string>
+    <string name="tmc_before_accept_name">Наименование ТМЦ</string>
+    <string name="tmc_before_accept_code">Код ТМЦ</string>
+    <string name="tmc_before_accept_normal">Норма</string>
+    <string name="tmc_before_accept_stand">Установлено</string>
+    <string name="tmc_before_accept_acceptor_name">ФИО</string>
+    <string name="tmc_before_accept_min">МИН</string>
+    <string name="tmc_before_accept_max">МАКС</string>
+    <string name="tmc_before_accept_mnk">МНК</string>
+
+    <!--WriteOffDialog-->
+    <string name="dialog_write_off_continue">ОК</string>
+    <string name="dialog_write_off_back">Отмена</string>
+    <string name="dialog_write_off_continue_question">Подтвердить?</string>
+    <string name="dialog_write_off_overrun">Одна или более ТМЦ указана с перерасходом</string>
+
+    <!--MenuWithCheck-->
+    <string name="menu_with_check_ok">Подтвердить</string>
+
+    <!--Divide Activity-->
+    <string name="divide_title">Разделение работ в процентном соотношении</string>
+    <string name="divide_outfit">Наряд %1$s:</string>
+    <string name="divide_outfit_time">Время: %1$s</string>
+    <string name="divide_new_outfit_time">Время: </string>
+    <string name="divide_outfit_percent">Процент от всей работы: %1$d%%</string>
+    <string name="divide_outfit_normal">Норма: %1$s</string>
+    <string name="divide_new_outfit">Новый наряд:</string>
+    <string name="divide_percent_variants">Процент от всей работы:</string>
+    <string name="divide_description">При разделении будет создан новый наряд с указанным процентом по нормативу времени на выполнение работы. В новом наряде не будет исполнителей (в текущем назначенные ранее исполнители сохранятся), не будет данных о заказанных ТМЦ.</string>
+    <string name="divide_confirm">Разделить наряд</string>
+    <string name="divide_10_percent">10%</string>
+    <string name="divide_25_percent">25%</string>
+    <string name="divide_50_percent">50%</string>
+    <string name="divide_75_percent">75%</string>
+    <string name="divide_overtime_error">Невозможно установить время превышающее изначальное по наряду</string>
+
+    <!--PartlyAccept Activity-->
+    <string name="partly_accept_title">Частичная приемка работы</string>
+    <string name="partly_accept_outfit">Наряд %1$s:</string>
+    <string name="partly_accept_outfit_time">Время: %1$s</string>
+    <string name="partly_accept_outfit_percent">Процент от всей работы: %1$d%%</string>
+    <string name="partly_accept_outfit_normal">Норма: %1$s</string>
+    <string name="partly_accept_ready">Готовность:</string>
+    <string name="partly_accept_percent_variants">Процент от всей работы:</string>
+    <string name="partly_accept_description">Работа будет принята на указанное количество процентов.\n Будет сформирован новый наряд для выполнения оставшегося объема работ</string>
+    <string name="partly_accept_new_outfit_time">Время: %1$s</string>
+    <string name="partly_accept_new_outfit_percent">Процент от всей работы: %1$d%%</string>
+    <string name="partly_accept_confirm">Принять частично</string>
+    <string name="partly_accept_10_percent">10%</string>
+    <string name="partly_accept_25_percent">25%</string>
+    <string name="partly_accept_50_percent">50%</string>
+    <string name="partly_accept_75_percent">75%</string>
+
+    <!--GroupAssignment Activity-->
+    <string name="group_assignment_title">Групповое назначение исполнителей</string>
+    <string name="group_assignment_brig_error">Рабочие могут быть назначены только из одной бригады</string>
+    <string name="group_assignment_max_workers_error">Количество рабочих превышает максимальное число исполнителей</string>
+    <string name="group_assignment_worker_error">Рабочий недоступен для назначения</string>
+    <string name="group_assignment_worker_empty_error">Для отправки необходимо выбрать рабочего</string>
+    <string name="group_assignment_work_empty_error">Для отправки необходимо выбрать работу</string>
+    <string name="group_assignment_workers_error">Некоторые рабочие недоступны для назначения</string>
+    <string name="group_assignment_percent">%1$s%%</string>
+    <string name="group_assignment_time_norm">Норматив времени: %s</string>
+
+
+    <!--CountDialog-->
+    <string name="count_dialog_choose">Укажите количество повторов:</string>
+    <string name="count_dialog_cancel">Отмена</string>
+
+    <!--MeasurementActivity-->
+    <string name="measurement_title">Замеры по работе</string>
+    <string name="measurement_name">Показатель</string>
+    <string name="measurement_value">Значение</string>
+    <string name="measurement_norm">Норма</string>
+    <string name="measurement_worker">Сотрудник</string>
+    <string name="measurement_date">Дата</string>
+    <string name="measurement_comment">Комментарий</string>
+    <string name="measurement_value_true">Да</string>
+    <string name="measurement_value_false">Нет</string>
+    <string name="measurement_name_value">%1$s\n%2$s</string>
+    <string name="measurement_name_value_empty">%1$s</string>
+    <string name="measurement_refresh">Обновить</string>
+    <string name="measurements_no_data">Замеров по данной работе не найдено</string>
+    <string name="measurement_type">Тип замера</string>
+    <string name="measurement_no_task">Статус: Не назначены приборы для проведения аппаратных замеров</string>
+    <string name="measurement_waiting">Статус: Сделать аппаратные замеры назначенными приборами</string>
+    <string name="measurement_received">Статус: Аппаратные замеры получены</string>
+    <string name="measurement_status_btn_assign">Назначить приборы</string>
+    <string name="measurement_status_btn_check_receive">Проверить/получить замеры</string>
+    <string name="measurement_task_title">Задание на проведение аппаратного замера создано</string>
+    <string name="measurement_task_message">Список используемых приборов</string>
+    <string name="measurement_detail_comment_title">Комментарий к замеру</string>
+    <string name="measurement_detail_comment_content">Комментарий от %s\n%s\n%s</string>
+    <string name="measurement_edit_warning">Вы изменили аппаратные измерения ручными.\nПри сохранении изменения значения замеров будут перезаписаны,\nа статус замера изменится на ручной!\nПродолжить?</string>
+    <string name="measurement_hardware">Аппаратный</string>
+    <string name="measurement_handmade">Ручной</string>
+
+    <!--MeasureEditActivity-->
+    <string name="measurement_edit_title">Указание параметра замера</string>
+    <string name="measurement_edit_item_value_title">Точность: %1$s</string>
+    <string name="main_drawer_workers_presence">Явка сотрудника</string>
+
+    <!--WorkersPresenceActivity-->
+    <string name="workers_presence_title">Явка сотрудников на %s</string>
+    <string name="presence_header_worker">Сотрудник</string>
+    <string name="presence_header_number">Номер</string>
+    <string name="presence_header_presence">Явка</string>
+    <string name="presence_header_time_in">Приход</string>
+    <string name="presence_header_work_shift">Рабочая смена</string>
+    <string name="presence_header_work_time">Часы Работы</string>
+    <string name="presence_header_night_shift">Ночная смена</string>
+    <string name="presence_header_work_shift_begin">Начало</string>
+    <string name="presence_header_work_shift_finish">Конец</string>
+    <string name="presence_header_work_time_base">Основные</string>
+    <string name="presence_header_work_time_night">В т.ч. ночь</string>
+    <string name="presence_header_time_out">Уход</string>
+    <string name="presence_menu_item_cancel">Отмена</string>
+
+    <!--MeasurementTaskDialog-->
+    <string name="measurements_task_dialog_positive">Ок</string>
+    <string name="measurements_task_dialog_negative">Отмена</string>
+    <string name="measurements_task_dialog_measurement_type">Укажите тип измерения</string>
+    <string name="measurements_task_dialog_position_number">Номер позиции</string>
+
+    <!--AssignmentTemplatesActivity-->
+    <string name="assignment_templates_title">Выбор шаблонов исполнителей</string>
+
+    <!--AssignmentParamsDialog-->
+    <string name="assignment_template_date">Укажите дату:</string>
+    <string name="assignment_template_accept_btn">Применить</string>
+    <string name="assignment_night_shift">Ночная смена</string>
+    <string name="assignment_template_cancel_btn">Отмена</string>
+
+    <string name="in_stock">Есть на складе</string>
+    <string name="uom">ед.изм.</string>
+    <string name="activity_brig_assignment_choose_template">Выбрать шаблон группового назначения</string>
+
+    <!--OrderToRepairActivity-->
+    <string name="order_to_repair_button">Запросить ТМЦ для проведения ремонта</string>
+    <string name="order_to_repair_title">Запрос на получение ТМЦ для выполнения ремонта</string>
+
+    <!--SelectEquipmentDialog-->
+    <string name="select_equipment_dialog_title">Выбор секций</string>
+    <string name="select_equipment_dialog_progress">Выбор секций…</string>
+    <string name="equipment_rep_types_filter_menu_item">Типы ремонта</string>
+
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/comment"
+        android:icon="@drawable/ic_message"
+        android:orderInCategory="1"
+        android:title="@string/locomotive_details_item_menu_comment" />
+
+    <item
+        android:id="@+id/photo"
+        android:icon="@drawable/ic_icon_add_a_photo"
+        android:orderInCategory="2"
+        android:title="@string/locomotive_details_item_menu_photo" />
+
+    <item
+        android:id="@+id/delete"
+        android:icon="@drawable/ic_icon_delete"
+        android:orderInCategory="2"
+        android:title="@string/locomotive_details_item_menu_delete" />
+</menu>

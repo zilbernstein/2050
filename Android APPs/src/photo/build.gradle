@@ -1,0 +1,29 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+apply from: '../build_shared_android_lib.gradle'
+apply from: '../build_shared_dependencies.gradle'
+
+dependencies {
+    //Dagger
+    depsDagger()
+    //Test
+    depsTests
+    //Rx Kotlin
+    depsRxKotlin()
+    //MapsStruct
+    depsMapStruct()
+    // AppCompat
+    depsAppCompat()
+    // UI
+    implementation project(':ui')
+    //Utils
+    implementation project(':utils')
+    //Thingworx
+    implementation project(':thingworx')
+    // Core
+    implementation project(path: ':core')
+    // Glide
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+}

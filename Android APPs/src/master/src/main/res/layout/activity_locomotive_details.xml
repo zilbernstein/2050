@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ru.digipeople.locotech.master.ui.activity.urgent.UrgentActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            layout="@layout/include_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.45" />
+
+        <TextView
+            android:id="@+id/activity_locomotive_detail_remark_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/locomotive_details_remark_title"
+            android:textColor="@color/appBlack"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/activity_locomotive_detail_create_remark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            app:backgroundTint="@color/appGreen"
+            app:elevation="2dp"
+            app:fabSize="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/guideline"
+            app:srcCompat="@drawable/icon_add" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/activity_locomotive_detail_remark_recycler"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:clipToPadding="false"
+            android:paddingBottom="70dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/activity_locomotive_detail_remark_title" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="32dp"
+            android:background="@color/appWhite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/guideline"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <TextView
+                android:id="@+id/locomotive_detail_time"
+                style="@style/ItemLocomotiveTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/appBlack"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="01:15:15" />
+
+            <ProgressBar
+                android:id="@+id/locomotive_detail_progress_bar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="256dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:progressDrawable="@drawable/progress_bar_drawable_red"
+                app:layout_constraintLeft_toRightOf="@+id/locomotive_detail_time"
+                app:layout_constraintRight_toLeftOf="@+id/locomotive_detail_percent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:progress="50" />
+
+            <TextView
+                android:id="@+id/locomotive_detail_percent"
+                style="@style/ItemLocomotiveTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:textColor="@color/appRed"
+                android:textSize="16sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="56%" />
+
+            <ru.digipeople.ui.view.HorizontalSortView
+                android:id="@+id/locomotive_detail_performer_sort"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toStartOf="@+id/locomotive_detail_urgency_sort"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/locomotive_detail_progress_bar"
+                custom:sortTitle="@string/locomotive_details_item_sort_performer" />
+
+            <ru.digipeople.ui.view.HorizontalSortView
+                android:id="@+id/locomotive_detail_urgency_sort"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toStartOf="@+id/locomotive_detail_title_sort"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/locomotive_detail_performer_sort"
+                app:layout_constraintTop_toBottomOf="@+id/locomotive_detail_progress_bar"
+                custom:sortTitle="@string/locomotive_details_item_sort_urgency" />
+
+
+            <ru.digipeople.ui.view.HorizontalSortView
+                android:id="@+id/locomotive_detail_title_sort"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginRight="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/locomotive_detail_urgency_sort"
+                app:layout_constraintTop_toBottomOf="@+id/locomotive_detail_progress_bar"
+                custom:sortTitle="@string/locomotive_details_item_sort_title" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/item_locomotive_details_remark_comment_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="locomotive_detail_performer_sort, locomotive_detail_urgency_sort, locomotive_detail_title_sort" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/activity_locomotive_details_work_recycler"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:clipToPadding="false"
+                android:elevation="2dp"
+                android:paddingBottom="70dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/locomotive_detail_performer_sort" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/activity_locomotive_detail_create_work"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                app:backgroundTint="@color/appGreen"
+                app:elevation="2dp"
+                app:fabSize="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:srcCompat="@drawable/icon_add" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include layout="@layout/include_main_drawer" />
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <include
+                layout="@layout/include_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        <ScrollView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                app:layout_constraintBottom_toTopOf="@+id/activity_task_declined_controll_layout">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/activity_task_declined_equipment_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/declined_task_activity_equipment"
+                        android:textColor="@color/appBlack"
+                        android:textAllCaps="true"
+                        android:textSize="16sp"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/activity_task_declined_equipment_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/appWhite"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/activity_task_declined_equipment_title">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/activity_task_declined_loco_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_train_icon"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="16dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/activity_task_declined_equipment_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/appBlack"
+                            android:layout_marginLeft="8dp"
+                            app:layout_constraintTop_toTopOf="@id/activity_task_declined_loco_icon"
+                            app:layout_constraintBottom_toBottomOf="@id/activity_task_declined_loco_icon"
+                            app:layout_constraintLeft_toRightOf="@+id/activity_task_declined_loco_icon"/>
+
+                    <ProgressBar
+                            android:id="@+id/activity_task_declined_equipment_progress"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="18dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:progressDrawable="@drawable/progress_bar_red"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/activity_task_declined_loco_icon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            tools:progress="50"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/activity_task_declined_task_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/appWhite"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/activity_task_declined_equipment_layout">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/activity_task_declined_section_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/appBlack"
+                            android:layout_marginTop="4dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            tools:text="Секция 0365А"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/activity_task_declined_task_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/appBlack"
+                            android:layout_marginLeft="16dp"
+                            app:layout_constraintTop_toTopOf="@+id/activity_task_declined_task_status"
+                            app:layout_constraintBottom_toBottomOf="@id/activity_task_declined_task_status"
+                            app:layout_constraintLeft_toLeftOf="parent"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/activity_task_declined_task_status"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            app:srcCompat="@drawable/ic_icon_decliened_work"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp"
+                            app:layout_constraintTop_toBottomOf="@+id/activity_task_declined_section_title"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/activity_task_declined_equipment_reason"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/declined_task_activity_reason"
+                        android:textColor="@color/appBlack"
+                        android:textSize="16sp"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/activity_task_declined_task_layout"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/activity_task_declined_equipment_reason_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/appWhite"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        app:layout_constraintTop_toBottomOf="@id/activity_task_declined_equipment_reason"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/activity_task_declined_equipment_edit_reason"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_create"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginTop="16dp"
+                            android:paddingBottom="8dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/activity_task_declined_equipment_reason_list"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            tools:layout_height="100dp"
+                            android:layout_margin="16dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@id/activity_task_declined_equipment_edit_reason"
+                            app:layout_constraintTop_toBottomOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/activity_task_declined_comment_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/declined_task_activity_comment"
+                        android:textColor="@color/appBlack"
+                        android:textSize="16sp"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/activity_task_declined_equipment_reason_layout"/>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/activity_task_declined_equipment_comment_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/appWhite"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:paddingBottom="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/activity_task_declined_comment_title"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/activity_task_declined_edit_comment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_create"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/activity_task_declined_equipment_comment"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            tools:layout_height="100dp"
+                            android:textColor="@color/appGray"
+                            android:text="@string/declined_task_activity_hint_comment"
+                            android:layout_margin="16dp"
+                            android:gravity="start"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@id/activity_task_declined_edit_comment"
+                            app:layout_constraintTop_toBottomOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/activity_task_declined_controll_layout"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:background="@color/appRed"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/activity_task_declined_check_controll_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:srcCompat="@drawable/ic_check"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include layout="@layout/include_main_drawer"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

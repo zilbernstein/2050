@@ -1,0 +1,50 @@
+<resources>
+    <!--AuthActivity-->
+    <string name="auth_activity_name">Имя пользователя</string>
+    <string name="auth_activity_password">Пароль</string>
+    <string name="auth_activity_login">Вход</string>
+    <string name="auth_activity_auth_error">Пользователь с таким сочетанием имени и пароля не найден</string>
+    <string name="hardocoded_first_name">Иван</string>
+    <string name="hardocoded_last_name">Петров</string>
+
+    <!--RemarksActivity-->
+    <string name="remarks_title">Замечания для согласования</string>
+    <string name="remarks_accept_btn">Согласовать</string>
+    <string name="remarks_works_title">Работы по замечанию</string>
+    <string name="remarks_reject_btn">Отклонить</string>
+    <string name="remarks_choose_remark">Выберите замечание</string>
+    <string name="remarks_photos">Посмотреть фотографии</string>
+
+    <!--ApproveDialog-->
+    <string name="approve_fragment_accept_title">Следующий список работ будет подтвержден:</string>
+    <string name="approve_fragment_reject_title">Следующий список работ будет отклонен:</string>
+    <string name="approve_fragment_approved">Подтверждено работ:</string>
+    <string name="approve_fragment_rejected">Отклонено работ:</string>
+    <string name="approve_fragment_reject_btn">Отмена</string>
+    <string name="approve_fragment_approve_btn">Ок</string>
+
+    <!--MainDrawerView-->
+    <string name="main_drawer_remarks">Замечания</string>
+    <string name="main_drawer_messages">Сообщения</string>
+    <string name="main_drawer_telephones">Телефоны</string>
+    <string name="main_drawer_exit">Выход</string>
+    <string name="main_drawer_name">%1$s %2$s</string>
+    <string name="main_drawer_version">Версия %1$s</string>
+
+    <!--WorkActivity-->
+    <string name="work_activity_parameter">Параметр</string>
+    <string name="work_activity_title">Информация о работе</string>
+    <string name="work_activity_parameter_value">Значение параметра</string>
+    <string name="work_activity_nomination_value">Наименование</string>
+    <string name="work_activity_code_value">Код работы</string>
+    <string name="work_activity_performers_value">Исполнители</string>
+    <string name="work_activity_tmc_value">ТМЦ</string>
+    <string name="work_activity_time_value">Нормативы времени</string>
+    <string name="work_activity_remark_value">Связанное замечание</string>
+    <string name="work_activity_comment_value">Комментарий</string>
+
+    <!--CommentActivity-->
+    <string name="comment_activity_title">Подтверждение</string>
+    <string name="comment_activity_text_hint">Текст комментария</string>
+
+</resources>

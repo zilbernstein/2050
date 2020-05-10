@@ -1,0 +1,27 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+apply from: '../build_shared_android_lib.gradle'
+apply from: '../build_shared_dependencies.gradle'
+
+dependencies {
+    //Dagger
+    depsDagger()
+    //Rx Kotlin
+    depsRxKotlin()
+    //Gson
+    depsGson()
+    //Test
+    depsTests()
+    // AppCompat
+    depsAppCompat()
+    // GMS services
+    implementation 'com.google.android.gms:play-services-vision:17.0.2'
+    // UI
+    implementation project(':ui')
+    // Utils
+    implementation project(':utils')
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+}

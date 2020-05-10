@@ -1,0 +1,53 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Base.Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/activityBackground</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu</item>
+    </style>
+
+    <style name="PopupMenu" parent="@android:style/Widget.PopupMenu">
+        <item name="android:popupBackground">@color/appWhite</item>
+    </style>
+
+    <!--Пункты боковго меню-->
+    <style name="Widget.App.MainDrawer.MenuItem" parent="">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--Стиль для текста item_locomotive-->
+    <style name="ItemLocomotiveTextStyle" parent="">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!--Стиль для RadioButton-->
+    <style name="RadioButtonStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/appBlack</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:paddingLeft">16dp</item>
+    </style>
+
+    <!--Стиль для текста item_locomotive-->
+    <style name="ItemPerformanceTextStyle" parent="">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/appBlack</item>
+    </style>
+
+    <!--Стиль для экрана Явки [WorkersPresenceActivity]-->
+    <style name="AppTheme.WorkersPresence" parent="AppTheme">
+        <item name="actionMenuTextColor">@color/appWhite</item>
+    </style>
+
+</resources>

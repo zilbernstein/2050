@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbarColor"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_toolbar_back" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbarColor"
+        android:ellipsize="end"
+        android:textColor="@color/appWhite"
+        android:textSize="18sp"
+        android:gravity="center_vertical"
+        app:layout_constraintLeft_toRightOf="@id/back_button"
+        app:layout_constraintRight_toLeftOf="@id/check_button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/check_button"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbarColor"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_check" />
+
+    <EditText
+        android:id="@+id/edit_amount"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/tmc_edit_background"
+        android:elevation="2dp"
+        android:ellipsize="end"
+        android:gravity="start|center_vertical"
+        android:hint="@string/tmc_amount_hint"
+        android:maxLines="1"
+        android:paddingLeft="8dp"
+        android:paddingRight="48dp"
+        android:textColor="@color/appBlack"
+        android:textSize="16sp"
+        android:inputType="numberDecimal"
+        android:digits="0123456789."
+        app:layout_constraintLeft_toRightOf="@id/start_guideline"
+        app:layout_constraintRight_toLeftOf="@id/uom_guideline"
+        app:layout_constraintTop_toBottomOf="@id/normal_title" />
+
+    <ImageView
+        android:id="@+id/clear_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:elevation="2dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/edit_amount"
+        app:layout_constraintRight_toRightOf="@id/edit_amount"
+        app:layout_constraintTop_toTopOf="@id/edit_amount"
+        app:srcCompat="@drawable/ic_search_close" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/uom_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <TextView
+        android:id="@+id/uom_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/uom"
+        android:textColor="@color/appBlack"
+        app:layout_constraintLeft_toRightOf="@id/uom_guideline"
+        app:layout_constraintRight_toLeftOf="@id/section_guideline"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <TextView
+        android:id="@+id/uom_value"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/tmc_edit_background"
+        android:elevation="2dp"
+        android:gravity="center"
+        android:textColor="@color/appBlack"
+        app:layout_constraintBottom_toBottomOf="@id/edit_amount"
+        app:layout_constraintLeft_toRightOf="@id/uom_guideline"
+        app:layout_constraintRight_toLeftOf="@id/section_guideline"
+        app:layout_constraintTop_toTopOf="@id/edit_amount" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/section_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <TextView
+        android:id="@+id/normal_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/tmc_before_accept_normal"
+        android:textColor="@color/appBlack"
+        app:layout_constraintLeft_toRightOf="@id/section_guideline"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <TextView
+        android:id="@+id/normal_value"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@drawable/tmc_edit_background"
+        android:elevation="2dp"
+        android:gravity="center"
+        android:textColor="@color/appBlack"
+        android:paddingRight="8dp"
+        android:paddingLeft="8dp"
+        android:minWidth="64dp"
+        app:layout_constraintBottom_toBottomOf="@id/edit_amount"
+        app:layout_constraintLeft_toRightOf="@id/section_guideline"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/edit_amount" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/end_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.99" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

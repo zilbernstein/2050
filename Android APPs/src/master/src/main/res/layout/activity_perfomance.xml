@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ru.digipeople.locotech.master.ui.activity.urgent.UrgentActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            layout="@layout/include_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <HorizontalScrollView
+            android:id="@+id/tabs_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:fillViewport="true"
+            android:focusable="true"
+            android:orientation="horizontal"
+            android:scrollbars="none"
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/appWhite">
+
+                <ru.digipeople.ui.view.HorizontalSortView
+                    android:id="@+id/activity_performance_new"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/appWhite"
+                    android:minWidth="70dp"
+                    android:paddingTop="16dp"
+                    custom:sortTitle="@string/performance_activity_sort_new" />
+
+                <ru.digipeople.ui.view.HorizontalSortView
+                    android:id="@+id/activity_performance_in_approve"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/appWhite"
+                    android:minWidth="70dp"
+                    android:paddingTop="16dp"
+                    custom:sortTitle="@string/performance_activity_sort_in_approve" />
+
+                <ru.digipeople.ui.view.HorizontalSortView
+                    android:id="@+id/activity_performance_in_task"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/appWhite"
+                    android:minWidth="70dp"
+                    android:paddingTop="16dp"
+                    custom:sortTitle="@string/performance_activity_sort_in_task" />
+
+                <ru.digipeople.ui.view.HorizontalSortView
+                    android:id="@+id/activity_performance_performancing"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/appWhite"
+                    android:minWidth="70dp"
+                    android:paddingTop="16dp"
+                    custom:sortTitle="@string/performance_activity_sort_performancing" />
+
+                <ru.digipeople.ui.view.HorizontalSortView
+                    android:id="@+id/activity_performance_finished"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/appWhite"
+                    android:minWidth="70dp"
+                    android:paddingTop="16dp"
+                    custom:sortTitle="@string/performance_activity_sort_finished" />
+
+                <ru.digipeople.ui.view.HorizontalSortView
+                    android:id="@+id/activity_performance_accepted"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/appWhite"
+                    android:minWidth="70dp"
+                    android:paddingTop="16dp"
+                    custom:sortTitle="@string/performance_activity_sort_accepted" />
+
+                <ru.digipeople.ui.view.HorizontalSortView
+                    android:id="@+id/activity_performance_all"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/appWhite"
+                    android:minWidth="70dp"
+                    android:paddingTop="16dp"
+                    custom:sortTitle="@string/performance_activity_sort_all" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/activity_perfomance_recycler_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="16dp"
+            android:fadeScrollbars="false"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/activity_performance_button"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tabs_scroll" />
+
+        <Button
+            android:id="@+id/activity_performance_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/green_btn"
+            android:text="@string/performance_activity_accept_all"
+            android:textAllCaps="false"
+            android:textColor="@color/appWhite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include layout="@layout/include_main_drawer" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/column_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:minHeight="32dp"
+        app:layout_constraintLeft_toRightOf="@id/start_guideline"
+        app:layout_constraintRight_toRightOf="@id/end_guideline"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/filter"
+            android:layout_width="128dp"
+            android:layout_height="32dp"
+            android:gravity="center"
+            android:text="@string/inspection_activity_filter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.widget.Button
+            android:id="@+id/new_remark"
+            android:layout_width="192dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="144dp"
+            android:background="@drawable/blue_button_state"
+            android:text="@string/inspection_activity_new_remark"
+            android:textAllCaps="false"
+            android:textColor="@color/appWhite"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/comment_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.625" />
+
+        <TextView
+            android:id="@+id/comment"
+            style="@style/ColoumnTitle"
+            android:text="@string/inspection_activity_comment"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/comment_guideline"
+            app:layout_constraintRight_toLeftOf="@id/photo_guideline"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/photo_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.7" />
+
+        <TextView
+            android:id="@+id/photo"
+            style="@style/ColoumnTitle"
+            android:text="@string/inspection_activity_photo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/photo_guideline"
+            app:layout_constraintRight_toLeftOf="@id/master_guideline"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/master_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.775" />
+
+        <TextView
+            android:id="@+id/master"
+            style="@style/ColoumnTitle"
+            android:text="@string/inspection_activity_master"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/master_guideline"
+            app:layout_constraintRight_toLeftOf="@id/otk_guideline"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/otk_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.85" />
+
+        <TextView
+            android:id="@+id/otk"
+            style="@style/ColoumnTitle"
+            android:text="@string/inspection_activity_otk"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/otk_guideline"
+            app:layout_constraintRight_toLeftOf="@id/rzd_guideline"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/rzd_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.925" />
+
+        <TextView
+            android:id="@+id/rzd"
+            style="@style/ColoumnTitle"
+            android:text="@string/inspection_activity_rzd"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/rzd_guideline"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/end_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.98" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/start_guideline"
+        app:layout_constraintRight_toLeftOf="@id/end_guideline"
+        app:layout_constraintTop_toBottomOf="@id/column_layout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

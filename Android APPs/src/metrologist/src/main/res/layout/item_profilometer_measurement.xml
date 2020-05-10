@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/appWhite"
+    android:padding="16dp">
+
+    <View
+        android:id="@+id/section_view_dot"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/black_dot" />
+
+    <TextView
+        android:id="@+id/measurement_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:ellipsize="end"
+        android:textAllCaps="true"
+        android:maxLines="1"
+        android:textSize="16sp"
+        tools:text="Измерение № 123456789 от 13.05.2019 15:40" />
+
+</LinearLayout>

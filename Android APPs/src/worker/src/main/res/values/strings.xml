@@ -1,0 +1,128 @@
+<resources>
+    <!--MainDrawerView-->
+    <string name="main_drawer_name">%1$s %2$s</string>
+    <string name="main_drawer_status_work">Статус: Работаю</string>
+    <string name="main_drawer_status_not_in_work">Статус: Не работаю</string>
+    <string name="main_drawer_my_work">Мои задания</string>
+    <string name="main_drawer_task">Задание</string>
+    <string name="main_drawer_settings">Настройки</string>
+    <string name="main_drawer_telephones">Телефоны</string>
+    <string name="main_drawer_exit">Выход</string>
+    <string name="main_drawer_version">Версия %1$s</string>
+    <string name="main_drawer_task_unchosen">Не выбрано</string>
+    <string name="main_drawer_settings_mistake">Экран настроек недоступен в тестовой версии приложения</string>
+    <string name="main_drawer_task_mistake">Для перехода к текущей задаче необходимо выбрать работу в раздели Мои задачи</string>
+    <string name="main_drawer_plan_bik">План БИК</string>
+
+    <!--AuthActivity-->
+    <string name="auth_activity_name">Имя пользователя</string>
+    <string name="auth_activity_password">Пароль</string>
+    <string name="auth_activity_login">Вход</string>
+    <string name="auth_activity_auth_error">Пользователь с таким сочетанием имени и пароля не найден</string>
+
+    <!--ShiftActivity-->
+    <string name="shift_activity_title">Смена</string>
+    <string name="shift_activity_welcome">Здравствуйте, \n %1$s %2$s!</string>
+    <string name="shift_activity_status">Ваш текущий статус:</string>
+    <string name="shift_activity_status_work">Работаю</string>
+    <string name="shift_activity_status_free">Не работаю</string>
+    <string name="shift_activity_status_start_work">Начать работу</string>
+    <string name="shift_activity_status_end_work">Закончить работу</string>
+    <string name="shift_activity_end_work_mistake">Перед закрытием смены необходимо остановить работу</string>
+
+    <!--TaskListActivity-->
+    <string name="my_task_activity_title">Мои задания</string>
+    <string name="my_task_activity_equipment">Локомотив/секция</string>
+    <string name="my_task_activity_my_task">Мои задания</string>
+    <string name="my_task_activity_comment">Комментарии</string>
+
+    <!--TaskActivity-->
+    <string name="task_activity_title">Задание</string>
+    <string name="task_activity_status">Статус:</string>
+    <string name="task_activity_status_in_work">В работе</string>
+    <string name="task_activity_status_new_work">Новая работа</string>
+    <string name="task_activity_status_paused">Приостановлена</string>
+    <string name="task_activity_status_done">Выполнена</string>
+    <string name="task_activity_equipment">Локомотив/секция</string>
+    <string name="task_activity_tmc">ТМЦ</string>
+    <string name="task_activity_workers">Исполнители(%1$d)</string>
+    <string name="task_activity_time_normal">Норма: (%1$s)</string>
+    <string name="task_activity_percent">%1$d%%</string>
+    <string name="task_activity_tmc_amount">%1$d</string>
+    <string name="task_activity_tmc_amount_float">%1$d</string>
+    <string name="task_activity_equipment_title">%1$s %2$s</string>
+    <string name="task_activity_сheck_error">Невозможно завершить работу в тестовой версии приложения</string>
+    <string name="task_activity_start_error">Для начала новой работы необходимо приостановить текущую</string>
+    <string name="task_activity_start_shift_error">Для начала выполнения задания необходимо начать работу</string>
+    <string name="task_activity_measurement_no_task">Статус: Не назначены приборы для проведения аппаратных замеров</string>
+    <string name="task_activity_measurement_waiting">Статус: Сделать аппаратные замеры назначенными приборами</string>
+    <string name="task_activity_measurement_received">Статус: Аппаратные замеры получены</string>
+    <string name="task_activity_measurement_status_btn_assign">Назначить приборы</string>
+    <string name="task_activity_measurement_status_btn_check_receive">Проверить/получить замеры</string>
+    <string name="task_activity_measurement_task_title">Задание на проведение аппаратного замера создано</string>
+    <string name="task_activity_measurement_task_message">Список используемых приборов</string>
+    <string name="task_activity_measurement_detail_comment_title">Комментарий к замеру</string>
+    <string name="task_activity_measurement_detail_comment_content">Комментарий от %s\n%s\n%s</string>
+    <string name="task_activity_measurement_edit_warning">Вы изменили аппаратные измерения ручными.\nПри сохранении изменения значения замеров будут перезаписаны,\nа статус замера изменится на ручной!\nПродолжить?</string>
+    <string name="task_activity_checklist_error">Чеклист для данной работы не предусмотрен</string>
+    <string name="task_activity_checklist_checked_error">Нельзя завершить работу.\nНе все пункты чеклиста проверены</string>
+
+    <!--MeasurementTaskDialog-->
+    <string name="measurements_task_dialog_positive">Ок</string>
+    <string name="measurements_task_dialog_negative">Отмена</string>
+    <string name="measurements_task_dialog_measurement_type">Укажите тип измерения</string>
+    <string name="measurements_task_dialog_position_number">Номер позиции</string>
+
+    <!--CommentActivity-->
+    <string name="comment_activity_hint">Текст комментария</string>
+    <string name="comment_activity_input_comment">Ввод комментария</string>
+
+    <!--TaskDeclinedActivity-->
+    <string name="declined_task_activity_title">Указание причины</string>
+    <string name="declined_task_activity_reason">Причины остановки/отказа</string>
+    <string name="declined_task_activity_comment">Комментарий</string>
+    <string name="declined_task_activity_hint_comment">Введите текст комментария</string>
+    <string name="declined_task_activity_equipment">Локомотив/секция</string>
+    <string name="declined_task_сheck_mistake">Необходимо заполнить причины остановки</string>
+
+    <!--ChooseReasonActivity-->
+    <string name="choose_reason_activity">Выбор причины</string>
+    <string name="choose_reason_equipment">Локомотив/секция</string>
+
+    <!--TmcShortageActivity-->
+    <string name="tmc_shortage_title">Недостающие ТМЦ</string>
+    <string name="tmc_shortage_prefix">Недостающие ТМЦ:</string>
+    <string name="tmc_shortage_mistake">Необходимо выбрать каких ТМЦ недостает</string>
+
+    <!--MeasurementsActivity-->
+    <string name="measure_title">Замеры по работе</string>
+    <string name="measure_item_value_title">Значение</string>
+    <string name="measure_item_norma_title">Норма</string>
+    <string name="measure_item_worker_title">Сотрудник</string>
+    <string name="measure_item_date_title">Дата</string>
+    <string name="value">Значение</string>
+    <string name="empty_data">Нет данных</string>
+    <string name="measure_before_repair">До ремонта</string>
+    <string name="measure_control">Контрольный</string>
+    <string name="measure_after_repair">После ремонта</string>
+    <string name="measure_comments">Показать комментарии</string>
+    <string name="measure_no_comments">Комментариев нет</string>
+    <string name="measure_yes">Да</string>
+    <string name="measure_no">Нет</string>
+    <string name="measurement_menu_undo_repair">До ремонта</string>
+    <string name="measurement_menu_control">Контрольный</string>
+    <string name="measurement_menu_after_repair">После ремонта</string>
+    <string name="measurement_value_true">Да</string>
+    <string name="measurement_value_false">Нет</string>
+    <string name="worker_title_text">%1$s\n%2$s</string>
+    <string name="measurement_value_empty"></string>
+    <string name="measure_item_measure_type">Тип замера</string>
+    <string name="measurement_hardware">Аппаратный</string>
+    <string name="measurement_handmade">Ручной</string>
+    <string name="measurement_refresh_menu_item">Refresh</string>
+    <string name="measurement_save_menu_item">Save</string>
+
+    <!--ChecklistActivity-->
+    <string name="checklist_title">Чеклист</string>
+    <string name="checklist_menu">Техпроцесс</string>
+</resources>

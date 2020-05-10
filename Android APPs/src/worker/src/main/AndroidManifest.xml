@@ -1,0 +1,72 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.digipeople.locotech.worker">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:node="replace" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".ui.activity.shift.ShiftActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.activity.mytask.MyTaskActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.activity.task.TaskActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.activity.photo.PhotoActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.activity.comment.CommentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+
+        <activity
+            android:name=".ui.activity.choosereason.ChooseReasonActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.activity.tmcshortage.TmcShortageActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.activity.splash.SplashActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="ru.digipeople.message.ui.activity.chooseaddressee.ChooseAddresseActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            tools:replace="android:screenOrientation" />
+
+        <activity
+            android:name=".ui.activity.measurements.MeasurementsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="ru.digipeople.locotech.worker.ui.activity.checklist.ChecklistActivity"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="ru.digipeople.locotech.worker.AppInitProvider"
+            android:authorities="${applicationId}.appInitProvider"
+            android:exported="false" />
+    </application>
+
+</manifest>

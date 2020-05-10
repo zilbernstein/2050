@@ -1,0 +1,87 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.digipeople.locotech.inspector">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:node="replace" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name="ru.digipeople.locotech.inspector.ui.activity.splash.SplashActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name="ru.digipeople.locotech.inspector.ui.activity.readonlycomment.ReadOnlyCommentActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name="ru.digipeople.locotech.inspector.ui.activity.equipment.EquipmentActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name="ru.digipeople.locotech.inspector.ui.activity.inspection.InspectionActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name="ru.digipeople.locotech.inspector.ui.activity.declinereason.DeclineReasonActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name="ru.digipeople.locotech.inspector.ui.activity.measurement.MeasurementActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name="ru.digipeople.locotech.inspector.ui.activity.controlpoint.ControlPointActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name="ru.digipeople.locotech.inspector.ui.activity.remarksearch.RemarkSearchActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name="ru.digipeople.locotech.inspector.ui.activity.comment.CommentActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <activity
+            android:name="ru.digipeople.locotech.inspector.ui.activity.repairbook.RepairBookActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name="ru.digipeople.locotech.inspector.ui.activity.checklist.CheckListActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name="ru.digipeople.locotech.inspector.ui.activity.print.PrintActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name="ru.digipeople.locotech.inspector.ui.activity.summary.SummaryActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name="ru.digipeople.locotech.inspector.ui.activity.signersearch.SignerSearchActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name="ru.digipeople.locotech.inspector.ui.activity.createremarkphoto.CreateRemarkPhotoActivity"
+            android:screenOrientation="landscape" />
+
+        <provider
+            android:name="ru.digipeople.locotech.inspector.AppInitProvider"
+            android:authorities="${applicationId}.appInitProvider"
+            android:exported="false" />
+
+    </application>
+
+
+</manifest>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/remarkBackground">
+
+    <TextView
+        android:id="@+id/remark_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:paddingRight="8dp"
+        android:textAllCaps="true"
+        android:textColor="@color/appBlack"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/title_group_guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Участок 01 - Ло - 234567890" />
+
+    <TextView
+        android:id="@+id/remark_count"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingRight="8dp"
+        android:textAllCaps="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/remark_title"
+        app:layout_constraintRight_toLeftOf="@id/title_group_guideline"
+        app:layout_constraintTop_toBottomOf="@id/remark_title"
+        tools:text="Снятие основных шплинтов" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/title_group_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.32603407" />
+
+    <android.widget.Button
+        android:id="@+id/accept_all_btn"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:background="@drawable/green_button_state"
+        android:text="@string/inspection_activity_accept_all"
+        android:textAllCaps="false"
+        android:textColor="@color/appWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/title_group_guideline"
+        app:layout_constraintRight_toLeftOf="@id/btn_guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/btn_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.475" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/master_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.775" />
+
+    <TextView
+        android:id="@+id/master_check"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/green_round_frame"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/master_guideline"
+        app:layout_constraintRight_toLeftOf="@id/otk_guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/otk_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <TextView
+        android:id="@+id/otk_check"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/green_round_frame"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/otk_guideline"
+        app:layout_constraintRight_toLeftOf="@id/rzd_guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rzd_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.925" />
+
+    <TextView
+        android:id="@+id/rzd_check"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/green_round_frame"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/rzd_guideline"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

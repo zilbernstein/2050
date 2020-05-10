@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="24dp"
+        android:layout_weight="4"
+        android:gravity="center"
+        android:text="@string/measurement_name"
+        android:textAllCaps="true"
+        android:textColor="@color/appBlack" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:text="@string/measurement_value"
+        android:textAllCaps="true"
+        android:textColor="@color/appBlack" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/measurement_norm"
+        android:textAllCaps="true"
+        android:textColor="@color/appBlack" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/measurement_type"
+        android:textAllCaps="true"
+        android:textColor="@color/appBlack" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:gravity="center"
+        android:text="@string/measurement_worker"
+        android:textAllCaps="true"
+        android:textColor="@color/appBlack" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/measurement_date"
+        android:textAllCaps="true"
+        android:textColor="@color/appBlack" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="24dp"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:text="@string/measurement_comment"
+        android:textAllCaps="true"
+        android:textColor="@color/appBlack" />
+
+</LinearLayout>

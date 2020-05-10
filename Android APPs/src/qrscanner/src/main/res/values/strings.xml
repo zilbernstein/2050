@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">qrscanner</string>
+
+    <string name="goods_not_found">Продукт не найден</string>
+    <string name="repeat_scanning">Повторить сканирование</string>
+
+</resources>

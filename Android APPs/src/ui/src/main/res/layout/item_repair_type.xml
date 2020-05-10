@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/repair_type_text"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:textColor="@color/appBlack"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@id/repair_type_check"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Деповский" />
+
+    <ImageView
+        android:id="@+id/repair_type_check"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="32dp"
+        android:src="@drawable/checkbox_green_selector" />
+
+</LinearLayout>

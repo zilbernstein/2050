@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:elevation="2dp">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:background="@drawable/wheel_params"
+        android:drawableEnd="@drawable/ic_expandable"
+        android:gravity="fill_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Трещина на поверхности катка" />
+
+    <LinearLayout
+        android:id="@+id/linear_author"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:background="@color/appWhite"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name">
+
+        <TextView
+            android:id="@+id/author_label"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/wheel_params"
+            android:gravity="fill"
+            android:paddingStart="8dp"
+            android:text="@string/measurement_confirmation_author_label" />
+
+        <TextView
+            android:id="@+id/author_value"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:background="@drawable/wheel_params"
+            android:gravity="fill"
+            android:paddingStart="8dp"
+            tools:text="Иванов И.И." />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_source"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:background="@color/appWhite"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear_author">
+
+        <TextView
+            android:id="@+id/source_label"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/wheel_params"
+            android:gravity="fill"
+            android:paddingStart="8dp"
+            android:text="@string/measurement_confirmation_source_label" />
+
+        <TextView
+            android:id="@+id/source_value"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:background="@drawable/wheel_params"
+            android:gravity="fill"
+            android:paddingStart="8dp"
+            tools:text="Параметры оборудования" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_equipment"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:background="@color/appWhite"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear_source">
+
+        <TextView
+            android:id="@+id/equipment_label"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/wheel_params"
+            android:gravity="fill"
+            android:paddingStart="8dp"
+            android:text="@string/measurement_confirmation_equipment_label" />
+
+        <TextView
+            android:id="@+id/equipment_value"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:background="@drawable/wheel_params"
+            android:gravity="fill"
+            android:paddingStart="8dp"
+            tools:text="264A 1231231231(1 КП, ЛЕВ)" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_date"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:background="@color/appWhite"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear_equipment">
+
+        <TextView
+            android:id="@+id/date_label"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/wheel_params"
+            android:gravity="fill"
+            android:paddingStart="8dp"
+            android:text="@string/measurement_confirmation_date_label" />
+
+        <TextView
+            android:id="@+id/date_value"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:background="@drawable/wheel_params"
+            android:gravity="fill"
+            android:paddingStart="8dp"
+            tools:text="12.08.2019" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

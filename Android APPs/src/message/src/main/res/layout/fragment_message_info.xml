@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appWhite"
+    android:elevation="2dp">
+
+    <TextView
+        android:id="@+id/fragment_message_info_whom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/appBlack"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/message_activity_whom" />
+
+    <TextView
+        android:id="@+id/fragment_message_info_recipient"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/appBlack"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_message_info_whom"
+        tools:text="Иванов Иван, Сергеев Сергей(14 чел.)" />
+
+    <View
+        android:id="@+id/fragment_message_info_separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/message_divider_color"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_message_info_recipient" />
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_message_info_down_separator"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_message_info_separator">
+
+        <TextView
+            android:id="@+id/fragment_message_info_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/appBlack"
+            tools:text="По своей сути служебная записка ‒ инструмент деловой корреспонденции внутри организации, между сотрудниками, не находящимися в подчинении друг у друга. В том случае, если сотрудник пишет записку вышестоящему лицу, она будет называться не служебной, а докладной. Цель записки – объяснить и согласовать аспекты деловых вопросов касательно работы сотрудника или отдела, и связанных с работой другого сотрудника или отдела. Записка пишется в тех случаях, когда устного общения недостаточно и просьбу необходимо задокументировать. Следует заметить, что служебная записка является только вспомогательным документом, не регламентированным ОКУД. Поэтому вся информация в служебных записках не содержит приказов и распоряжений." />
+    </ScrollView>
+
+    <View
+        android:id="@+id/fragment_message_info_down_separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/message_divider_color"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_message_info_send"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <TextView
+        android:id="@+id/fragment_message_info_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="64dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/message_detail_activity_resend"
+        android:textAllCaps="true"
+        android:textColor="@color/appBlack"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/activity_comment_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/commentToolbar"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteY="4dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/activity_comment_back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="16dp"
+            app:srcCompat="@drawable/ic_toolbar_back" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/activity_comment_title"
+            style="@style/ActionBarTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="@string/comment_activity_input_comment" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/activity_comment_check_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="16dp"
+            app:srcCompat="@drawable/ic_check" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/activity_comment_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        android:background="@color/appWhite"
+        android:hint="@string/comment_dialog_hint"
+        android:textColor="@color/appBlack"
+        android:textSize="14sp"
+        android:gravity="top|start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_comment_toolbar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

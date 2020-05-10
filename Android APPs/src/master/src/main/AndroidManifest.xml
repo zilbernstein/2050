@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.digipeople.locotech.master">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:node="replace" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".ui.activity.urgent.UrgentActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.activity.ordertorepair.OrderToRepairActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.activity.equipment.EquipmentActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".ui.activity.performance.PerformanceActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.activity.settings.SettingsActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".ui.activity.status.StatusActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".ui.activity.approved.ApprovedActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.activity.splash.SplashActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".ui.activity.remark.RemarkActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.activity.remarksearch.RemarkSearchActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.activity.worklist.WorkListActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.activity.searchperformer.SearchPerformerActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.activity.checkwork.CheckWorkActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.activity.allworklist.AllWorkActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.activity.comment.CommentActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.activity.tmclist.TmcListActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".ui.activity.tmcsearch.TmcSearchActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+
+        <activity
+            android:name=".ui.activity.tmcamount.TmcAmountActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".ui.activity.tmcbeforeaccept.TMCBeforeAcceptActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".ui.activity.writeofftmcamount.WriteOffTmcAmountActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".ui.activity.divide.DivideActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.activity.partlyaccept.PartlyAcceptActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.activity.groupassignment.GroupAssignmentActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.activity.measurement.MeasurementActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.activity.measurementedit.MeasurementEditActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.activity.readonlycomment.ReadOnlyCommentActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.activity.workerspresence.WorkersPresenceActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.WorkersPresence"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.activity.assignmenttemplates.AssignmentTemplatesActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan" />
+
+        <provider
+            android:name=".AppInitProvider"
+            android:authorities="${applicationId}.appInitProvider"
+            android:exported="false" />
+    </application>
+
+</manifest>

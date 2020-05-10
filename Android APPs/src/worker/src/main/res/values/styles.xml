@@ -1,0 +1,50 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Base.Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/activityBackground</item>
+    </style>
+
+    <!--Cтиль текста Toolbar-->
+    <style name="ActionBarTextStyle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:textColor">@color/appWhite</item>
+    </style>
+
+    <!--Пункты боковго меню-->
+    <style name="Widget.App.MainDrawer.MenuItem" parent="">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:paddingLeft">32dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:paddingRight">8dp</item>w
+    </style>
+
+    <!--Стиль для текста item_locomotive-->
+    <style name="ItemLocomotiveTextStyle" parent="">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!--Таб для экрана измерений-->
+    <style name="Widget.MeasurementTab" parent="">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/bg_measurements_tab</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+</resources>

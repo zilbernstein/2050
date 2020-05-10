@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbarColor"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_toolbar_back" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbarColor"
+        android:ellipsize="end"
+        android:gravity="start|center_vertical"
+        android:textColor="@color/appWhite"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@id/back_button"
+        app:layout_constraintRight_toLeftOf="@id/add_button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbarColor"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon_add" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/column_titles"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/start_recycler"
+        app:layout_constraintRight_toLeftOf="@id/end_recycler"
+        app:layout_constraintTop_toBottomOf="@id/title">
+
+
+        <TextView
+            android:id="@+id/tmc_name"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@color/appWhite"
+            android:gravity="center"
+            android:paddingRight="4dp"
+            android:text="@string/tmc_list_activity_tmc_name"
+            android:textColor="@color/appBlack"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/uom"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/uom_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.175" />
+
+        <TextView
+            android:id="@+id/uom"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@color/appWhite"
+            android:gravity="center"
+            android:text="@string/uom"
+            android:textColor="@color/appBlack"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/last_name_start_guideline"
+            app:layout_constraintStart_toStartOf="@id/uom_guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/last_name_start_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <TextView
+            android:id="@+id/last_name"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@color/appWhite"
+            android:gravity="center"
+            android:paddingRight="4dp"
+            android:text="@string/tmc_list_activity_last_name"
+            android:textColor="@color/appBlack"
+            app:layout_constraintLeft_toRightOf="@id/last_name_start_guideline"
+            app:layout_constraintRight_toLeftOf="@id/last_name_guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/last_name_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.35" />
+
+        <TextView
+            android:id="@+id/amount_asked"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@color/appWhite"
+            android:gravity="center"
+            android:text="@string/tmc_list_activity_amount_asked"
+            android:textColor="@color/appBlack"
+            app:layout_constraintLeft_toRightOf="@id/last_name_guideline"
+            app:layout_constraintRight_toLeftOf="@id/asked_amount_guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/asked_amount_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.45" />
+
+        <TextView
+            android:id="@+id/amount_normal"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@color/appWhite"
+            android:gravity="center"
+            android:text="@string/tmc_list_activity_amount_normal"
+            android:textColor="@color/appBlack"
+            app:layout_constraintLeft_toRightOf="@id/asked_amount_guideline"
+            app:layout_constraintRight_toLeftOf="@id/normal_amount_guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/normal_amount_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.53" />
+
+        <TextView
+            android:id="@+id/section_left_amount"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@color/appWhite"
+            android:gravity="center"
+            android:text="@string/tmc_list_activity_amount_section_left"
+            android:textColor="@color/appBlack"
+            app:layout_constraintLeft_toRightOf="@id/normal_amount_guideline"
+            app:layout_constraintRight_toLeftOf="@id/section_left_guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/section_left_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.62" />
+
+        <TextView
+            android:id="@+id/stock_left_amount"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@color/appWhite"
+            android:gravity="center"
+            android:text="@string/tmc_list_activity_amount_stock_left"
+            android:textColor="@color/appBlack"
+            app:layout_constraintLeft_toRightOf="@+id/section_left_guideline"
+            app:layout_constraintRight_toLeftOf="@+id/stock_left_min"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/stock_left_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.71" />
+
+        <TextView
+            android:id="@+id/stock_left_min"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@color/appWhite"
+            android:gravity="center"
+            android:text="@string/tmc_list_activity_amount_min"
+            android:textColor="@color/appBlack"
+            app:layout_constraintLeft_toRightOf="@id/stock_left_guideline"
+            app:layout_constraintRight_toLeftOf="@id/section_min_guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/section_min_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.80" />
+
+        <TextView
+            android:id="@+id/stock_left_max"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@color/appWhite"
+            android:gravity="center"
+            android:text="@string/tmc_list_activity_amount_max"
+            android:textColor="@color/appBlack"
+            app:layout_constraintLeft_toRightOf="@id/section_min_guideline"
+            app:layout_constraintRight_toLeftOf="@id/section_max_guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/section_max_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.87" />
+
+        <TextView
+            android:id="@+id/stock_left_mnk"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@color/appWhite"
+            android:gravity="center"
+            android:text="@string/tmc_list_activity_amount_mnk"
+            android:textColor="@color/appBlack"
+            app:layout_constraintLeft_toRightOf="@id/section_max_guideline"
+            app:layout_constraintRight_toLeftOf="@id/section_mnk_guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/section_mnk_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <ImageView
+            android:id="@+id/stock_left_arrow"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@color/appWhite"
+            android:gravity="center"
+            android:src="@drawable/ic_arrow_down"
+            app:layout_constraintLeft_toRightOf="@id/section_mnk_guideline"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/appWhite"
+        app:layout_constraintBottom_toBottomOf="@id/column_titles"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/column_titles"
+        app:layout_constraintTop_toTopOf="@id/column_titles" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/appWhite"
+        app:layout_constraintBottom_toBottomOf="@id/column_titles"
+        app:layout_constraintLeft_toRightOf="@id/column_titles"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/column_titles" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start_recycler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/end_recycler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.98" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/start_recycler"
+        app:layout_constraintRight_toLeftOf="@id/end_recycler"
+        app:layout_constraintTop_toBottomOf="@id/column_titles" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,15 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+apply from: '../build_shared_android_lib.gradle'
+apply from: '../build_shared_dependencies.gradle'
+
+dependencies {
+    // RX
+    depsRxKotlin()
+    // AppCompat
+    depsAppCompat()
+    implementation 'com.google.android.material:material:1.0.0'
+}

@@ -1,0 +1,80 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'ru.digipeople.versioning.androiddefault'
+
+apply from: '../build_shared_android_app.gradle'
+apply from: '../build_shared_dependencies.gradle'
+
+versioning {
+    appName = "technologist"
+}
+
+android {
+    defaultConfig {
+        applicationId "ru.digipeople.locotech.technologist"
+        // Константы
+        buildConfigField('String', 'THINGWORX_LIBRARY', "\"2050TechLibrary\"")
+    }
+
+    flavorDimensions "target"
+    productFlavors {
+        dev {
+            // Ресурсы
+            resValue "string", "app_name", "Технолог dev"
+            buildConfigField("String", "APP_CENTER_SECRET", "\"dfd8618d-3c02-4861-aec8-13436a35ed99\"")
+        }
+
+        beta {
+            // Ресурсы
+            resValue "string", "app_name", "Технолог β"
+            buildConfigField("String", "APP_CENTER_SECRET", "\"efe49eed-19f2-4fd8-b903-d7d8ac47cb8c\"")
+        }
+
+        prod {
+            // Ресурсы
+            resValue "string", "app_name", "Технолог"
+            buildConfigField("String", "APP_CENTER_SECRET", "\"7388251f-0705-45df-bbf0-ba1ce0108cad\"")
+        }
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+}
+
+dependencies {
+    // Dagger
+    depsDagger()
+    // Rx Kotlin
+    depsRxKotlin()
+    // MapsStruct
+    depsMapStruct()
+    // Tests
+    depsTests()
+    // AppCenter
+    depsAppCenter()
+    // AppCompat
+    depsAppCompat()
+    // Arch
+    depsArch()
+    // Ktx
+    depsKtx()
+    // Core
+    implementation project(':core')
+    // UI
+    api project(':ui')
+    // Photo
+    implementation project(':photo')
+    // TelephoneBook
+    implementation project(':telephonebook')
+    // Message
+    implementation project(':message')
+    // Utils
+    implementation project(':utils')
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+}
+
+apply plugin: 'com.google.gms.google-services'

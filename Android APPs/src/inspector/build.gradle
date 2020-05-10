@@ -1,0 +1,76 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'ru.digipeople.versioning.androiddefault'
+
+apply from: '../build_shared_android_app.gradle'
+apply from: '../build_shared_dependencies.gradle'
+
+versioning {
+    appName = "inspector"
+}
+
+android {
+    defaultConfig {
+        applicationId "ru.digipeople.locotech.inspector"
+        // Константы
+        buildConfigField('String', 'THINGWORX_LIBRARY', "\"2050LineReleaseLibrary\"")
+    }
+
+    flavorDimensions "target"
+    productFlavors {
+        dev {
+            // Ресурсы
+            resValue "string", "app_name", "Выпуск на линию dev"
+            buildConfigField("String", "APP_CENTER_SECRET", "\"a398e8e5-b86c-40a4-8315-506244d3eb53\"")
+        }
+
+        beta {
+            // Ресурсы
+            resValue "string", "app_name", "Выпуск на линию β"
+            buildConfigField("String", "APP_CENTER_SECRET", "\"2d835cae-7655-4352-947f-a1214e1d9873\"")
+        }
+
+        prod {
+            // Ресурсы
+            resValue "string", "app_name", "Выпуск на линию"
+            buildConfigField("String", "APP_CENTER_SECRET", "\"135d3f7e-bd95-4e7c-90eb-14f7df37c62b\"")
+        }
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+}
+
+dependencies {
+    // Dagger
+    depsDagger()
+    // Rx Kotlin
+    depsRxKotlin()
+    // MapsStruct
+    depsMapStruct()
+    // Tests
+    depsTests()
+    // AppCenter
+    depsAppCenter()
+    //AppCompat
+    depsAppCompat()
+    // Ktx
+    depsKtx()
+    // Arch
+    depsArch()
+    // Core
+    implementation project(':core')
+    // UI
+    api project(':ui')
+    // TelephoneBook
+    implementation project(':telephonebook')
+    // Message
+    api project(':message')
+    // Photo
+    implementation project(':photo')
+    // Utils
+    implementation project(':utils')
+}

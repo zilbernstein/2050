@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="64dp">
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="@style/PerformerSearchProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:progressDrawable="@drawable/performer_search_green_progress_bar"
+        tools:progress="100"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/item_performer_name"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="16dp"
+        android:textColor="@color/appBlack"
+        android:textSize="18sp"
+        android:paddingStart="8dp"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/item_performer_percent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="Сидоров Сидор Сидорович"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/item_performer_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:textColor="@color/appBlack"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        app:layout_constraintEnd_toStartOf="@id/item_performer_delete"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="72%"/>
+
+    <ImageView
+        android:id="@+id/item_performer_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_icon_exit" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

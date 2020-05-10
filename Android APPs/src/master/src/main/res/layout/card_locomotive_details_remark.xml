@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_locomotive_details_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8sp"
+    app:cardBackgroundColor="@color/appGray"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingBottom="16dp">
+
+        <View
+            android:id="@+id/item_locomotive_details_remark_status_view"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@drawable/ic_icon_check_circle_green" />
+
+        <TextView
+            android:id="@+id/item_locomotive_details_remark_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textAllCaps="true"
+            android:textColor="@color/appBlack"
+            android:textSize="18sp"
+            android:maxLines="3"
+            android:ellipsize="end"
+            app:layout_constraintLeft_toRightOf="@+id/item_locomotive_details_remark_status_view"
+            app:layout_constraintRight_toLeftOf="@+id/item_locomotive_details_remark_menu"
+            app:layout_constraintStart_toEndOf="@+id/item_locomotive_details_remark_status_view"
+            app:layout_constraintEnd_toStartOf="@id/item_locomotive_details_remark_menu"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/item_locomotive_details_remark_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_icon_more" />
+
+
+        <View
+            android:id="@+id/performer_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/mainDividerColor"
+            app:layout_constraintTop_toBottomOf="@+id/item_locomotive_details_remark_title"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <TextView
+            android:id="@+id/item_locomotive_details_remark_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/name_text_background"
+            android:padding="8dp"
+            android:textColor="@color/appBlack"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/performer_divider"
+            tools:text="Слуцкий А.В." />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/item_locomotive_details_remark_author_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="performer_divider, item_locomotive_details_remark_author" />
+
+        <View
+            android:id="@+id/comment_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/mainDividerColor"
+            app:layout_constraintTop_toBottomOf="@+id/item_locomotive_details_remark_author" />
+
+        <ImageView
+            android:id="@+id/item_locomotive_details_remark_comment_image"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/comment_divider"
+            app:srcCompat="@drawable/ic_message" />
+
+        <com.ms.square.android.expandabletextview.ExpandableTextView
+            android:id="@+id/item_locomotive_details_remark_comment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintLeft_toRightOf="@+id/item_locomotive_details_remark_comment_image"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/comment_divider"
+            expandableTextView:animDuration="200"
+            expandableTextView:maxCollapsedLines="1">
+
+            <TextView
+                android:id="@id/expandable_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/appBlack"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@id/expand_collapse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:background="@android:color/transparent"
+                android:padding="16dp" />
+        </com.ms.square.android.expandabletextview.ExpandableTextView>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/item_locomotive_details_remark_comment_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="comment_divider, item_locomotive_details_remark_comment, item_locomotive_details_remark_comment_image" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

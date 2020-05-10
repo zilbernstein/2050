@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="98dp"
+    android:background="?attr/selectableItemBackground">
+
+    <TextView
+        android:id="@+id/item_group_assignment_repeat_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:background="@drawable/ic_repeate"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/item_group_assignment_time_norm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/item_group_assignment_name"
+        tools:text="10" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/item_group_assignment_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="3"
+        android:textColor="@color/appBlack"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/item_group_assignment_time_norm"
+        app:layout_constraintEnd_toStartOf="@id/item_group_assignment_check"
+        app:layout_constraintStart_toEndOf="@id/item_group_assignment_repeat_count"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Тормозное пневматическое\n оборудование перед постановкой на ремонт испытать" />
+
+    <TextView
+        android:id="@+id/item_group_assignment_time_norm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:maxLines="1"
+        android:textColor="@color/appBlack"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/item_group_assignment_name"
+        app:layout_constraintTop_toBottomOf="@id/item_group_assignment_name"
+        tools:text="Норматив времени: 22.55" />
+
+    <ImageView
+        android:id="@+id/item_group_assignment_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:padding="5dp"
+        android:src="@drawable/checkbox_green_selector"
+        app:layout_constraintBottom_toBottomOf="@+id/item_group_assignment_time_norm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/item_group_assignment_name" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

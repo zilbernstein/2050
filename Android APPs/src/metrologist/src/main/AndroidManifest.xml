@@ -1,0 +1,50 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ru.digipeople.locotech.metrologist">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".ui.activity.sections.SectionsActivity"
+            android:screenOrientation="${defaultOrientation}" />
+        <activity
+            android:name=".ui.activity.profilometers.ProfilometersActivity"
+            android:screenOrientation="${defaultOrientation}" />
+        <activity
+            android:name=".ui.activity.measurementdetail.MeasurementDetailActivity"
+            android:screenOrientation="${defaultOrientation}" />
+        <activity
+            android:name=".ui.activity.measurementwheelpairs.MeasurementWheelPairsActivity"
+            android:screenOrientation="${defaultOrientation}"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ui.activity.measurementtypes.MeasurementTypesActivity"
+            android:screenOrientation="${defaultOrientation}" />
+        <activity
+            android:name=".ui.activity.tuningreasons.TuningReasonsActivity"
+            android:screenOrientation="${defaultOrientation}" />
+
+        <activity
+            android:name=".ui.activity.measurementconfirmation.MeasurementConfirmationActivity"
+            android:screenOrientation="${defaultOrientation}" />
+
+        <activity
+            android:name=".ui.activity.editmeasurement.EditMeasurementActivity"
+            android:screenOrientation="${defaultOrientation}"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.activity.reports.ReportsActivity"
+            android:screenOrientation="${defaultOrientation}" />
+
+        <provider
+            android:name=".AppInitProvider"
+            android:authorities="${applicationId}.appInitProvider"
+            android:exported="false" />
+    </application>
+</manifest>

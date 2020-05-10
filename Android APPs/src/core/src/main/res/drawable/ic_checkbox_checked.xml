@@ -1,0 +1,10 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="32dp"
+    android:height="32dp"
+    android:tint="@color/checkbox"
+    android:viewportWidth="0.46"
+    android:viewportHeight="0.46">
+    <path
+        android:fillColor="@color/checkbox"
+        android:pathData="M0.23,0.09c-0.08,0 -0.14,0.06 -0.14,0.14 0,0.08 0.06,0.14 0.14,0.14 0.08,0 0.14,-0.06 0.14,-0.14 0,-0.08 -0.06,-0.14 -0.14,-0.14zM0.14,0.23l0.02,-0.02 0.04,0.05 0.1,-0.1 0.02,0.02 -0.1,0.1 0,0 -0.02,0.02 -0.02,-0.02 0,0 -0.04,-0.05z" />
+</vector>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ripple_dark_theme">#33ffffff</color>
+    <color name="ripple_light_theme">#1f000000</color>
+
+    <color name="text_default_normal">@android:color/black</color>
+    <color name="text_default_disabled">#24000000</color>
+</resources>

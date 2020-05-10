@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/card_approved_work_status_view"
+            android:layout_width="8dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/up_divider"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/card_approved_work_title" />
+
+        <TextView
+            android:id="@+id/card_approved_work_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="8dp"
+            android:paddingTop="16dp"
+            android:textAllCaps="true"
+            android:textColor="@color/appBlack"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/card_approved_work_status_view"
+            app:layout_constraintRight_toLeftOf="@+id/card_approved_work_menu"
+            tools:text="Ремонт Контроллера км-34" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/card_approved_work_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_icon_more" />
+
+        <View
+            android:id="@+id/up_divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/mainDividerColor"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/card_approved_work_title"
+            app:layout_constraintTop_toBottomOf="@id/card_approved_work_title" />
+
+        <LinearLayout
+            android:id="@+id/card_approved_performer_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:divider="@drawable/transparent_divider"
+            android:orientation="horizontal"
+            android:showDividers="middle"
+            android:paddingBottom="16dp"
+            app:layout_constraintStart_toStartOf="@+id/card_approved_work_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/up_divider">
+
+            <TextView
+                android:id="@+id/card_approved_first_performer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/name_text_background"
+                android:padding="8dp"
+                android:textColor="@color/appBlack"
+                tools:text="Слуцкий А.В." />
+
+            <TextView
+                android:id="@+id/card_approved_second_performer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/name_text_background"
+                android:padding="8dp"
+                android:textColor="@color/appBlack"
+                tools:text="Слуцкий А.В." />
+
+            <TextView
+                android:id="@+id/card_approved_third_performer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/name_text_background"
+                android:padding="8dp"
+                android:textColor="@color/appBlack"
+                tools:text="Слуцкий А.В." />
+
+            <TextView
+                android:id="@+id/card_approved_amount_of_other_performers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/name_text_background"
+                android:padding="8dp"
+                android:textColor="@color/appBlack"
+                tools:text="+ 3 чел." />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/card_approved_performer_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="card_approved_performer_layout" />
+
+        <View
+            android:id="@+id/comment_divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/mainDividerColor"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/card_approved_work_title"
+            app:layout_constraintTop_toBottomOf="@+id/card_approved_performer_layout" />
+
+        <com.ms.square.android.expandabletextview.ExpandableTextView
+            android:id="@+id/card_approved_comment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintLeft_toLeftOf="@+id/card_approved_work_title"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/comment_divider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            expandableTextView:animDuration="200"
+            expandableTextView:maxCollapsedLines="1">
+
+            <TextView
+                android:id="@id/expandable_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/appBlack"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@id/expand_collapse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:background="@android:color/transparent"
+                android:padding="16dp" />
+        </com.ms.square.android.expandabletextview.ExpandableTextView>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/card_approved_comment_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="comment_divider, card_approved_comment" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

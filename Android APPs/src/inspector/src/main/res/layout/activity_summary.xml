@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            layout="@layout/include_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/start_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.02" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/center_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.35" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/accepted_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.59" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/declined_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.68" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/otk_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.82" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/rjd_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.97" />
+
+        <TextView
+            android:id="@+id/accepted"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="@string/summary_activity_accepted"
+            android:textAllCaps="true"
+            android:textColor="@color/appBlack"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/center_guideline"
+            app:layout_constraintLeft_toRightOf="@id/accepted_guideline"
+            app:layout_constraintRight_toLeftOf="@id/declined_guideline" />
+
+        <TextView
+            android:id="@+id/declined"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="@string/summary_activity_declined"
+            android:textAllCaps="true"
+            android:textColor="@color/appBlack"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/center_guideline"
+            app:layout_constraintLeft_toRightOf="@id/declined_guideline"
+            app:layout_constraintRight_toLeftOf="@id/otk_guideline" />
+
+        <TextView
+            android:id="@+id/declined_rjd_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="@string/summary_activity_declined_rjd"
+            android:textAllCaps="true"
+            android:textColor="@color/appBlack"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/center_guideline"
+            app:layout_constraintLeft_toRightOf="@id/otk_guideline"
+            app:layout_constraintRight_toLeftOf="@id/rjd_guideline" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/print_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/ic_icon_print"
+            app:backgroundTint="@color/appBlue"
+            app:fabSize="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/start_guideline" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/summary_recycler"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            tools:listitem="@layout/item_summary"
+            app:layout_constraintStart_toStartOf="@+id/start_guideline"
+            app:layout_constraintEnd_toEndOf="@+id/rjd_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/center_guideline"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include layout="@layout/include_main_drawer" />
+</androidx.drawerlayout.widget.DrawerLayout>

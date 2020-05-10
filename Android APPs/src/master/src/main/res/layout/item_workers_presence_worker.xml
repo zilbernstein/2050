@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:layout_marginStart="24dp"
+    android:layout_marginEnd="24dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:id="@+id/worker_item_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/appBlack"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/worker_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:textColor="@color/appBlack"
+            android:textSize="8pt"
+            tools:text="Власов Д.Н." />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/worker_number"
+            android:layout_width="68dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/appBlack"
+            android:textSize="8pt"
+            tools:text="251" />
+
+        <FrameLayout
+            android:layout_width="68dp"
+            android:layout_height="match_parent">
+
+            <CheckBox
+                android:id="@+id/worker_presence_flag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:button="@drawable/ic_checkbox" />
+
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/worker_time_in"
+            android:layout_width="68dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/appBlack"
+            android:textSize="8pt"
+            tools:text="18:50" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/worker_time_out"
+            android:layout_width="68dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/appBlack"
+            android:textSize="8pt"
+            tools:text="04:09" />
+
+        <TextView
+            android:id="@+id/worker_time_begin"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@null"
+            android:gravity="center"
+            android:textColor="@color/appBlack"
+            android:textSize="8pt"
+            tools:text="19:00" />
+
+        <TextView
+            android:id="@+id/worker_time_finish"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@null"
+            android:gravity="center"
+            android:textColor="@color/appBlack"
+            android:textSize="8pt"
+            tools:text="04:00" />
+
+        <EditText
+            android:id="@+id/worker_time_work_base"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@null"
+            android:gravity="center"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:textColor="@color/appBlack"
+            tools:text="8" />
+
+        <EditText
+            android:id="@+id/worker_time_night"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@null"
+            android:gravity="center"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:textColor="@color/appBlack"
+            tools:text="4" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <CheckBox
+                android:id="@+id/worker_night_shift_flag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:button="@drawable/ic_checkbox" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/worker_btns_container"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/worker_btn_edit"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_edit" />
+
+            <ImageButton
+                android:id="@+id/worker_btn_save"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_save"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/semitransparent_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/semitransparent_black"
+        android:visibility="gone" />
+
+</androidx.cardview.widget.CardView>

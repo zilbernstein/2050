@@ -1,0 +1,36 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+apply from: '../build_shared_android_lib.gradle'
+apply from: '../build_shared_dependencies.gradle'
+
+android {
+    defaultConfig {
+        // удаленный репозиторий для хранения фотографий
+        buildConfigField('String', 'THINGWORX_REPOSITORY', "\"SystemRepository\"")
+        // удаленная папка для хранения фотографий
+        buildConfigField('String', 'THINGWORX_DIRECTORY', "\"/\"")
+    }
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    //Dagger
+    depsDagger()
+    //Rx Kotlin
+    depsRxKotlin()
+    // AppCompat
+    depsAppCompat()
+    //ThingWorx SDK
+    api 'com.thingworx.thingworx_android_sdk:thingworx-android-sdk-1.1.2@aar'
+    api 'joda-time:joda-time:2.3'
+    implementation 'org.slf4j:slf4j-api:1.7.6'
+    //Gson
+    depsGson()
+    //Test
+    depsTests()
+    //Utils
+    implementation project(':utils')
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.7.4'
+}

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/kp_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="КП 12312939139193193" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_kp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/kp_title">
+
+        <TextView
+            android:id="@+id/axis_number_label"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/edit_measurement_number_wheel"
+            app:layout_constraintEnd_toStartOf="@id/axis_number_value"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/axis_number_value"
+            style="@style/Widget.MeasurementDetail.WheelPairValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/axis_number_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/axis_number_label"
+            app:layout_constraintTop_toTopOf="@id/axis_number_label"
+            tools:text="12354311231" />
+
+        <ImageView
+            android:id="@+id/axis_number_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_wheels"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/axis_number_label" />
+
+        <TextView
+            android:id="@+id/axis_count_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toBottomOf="@+id/axis_number_image"
+            app:layout_constraintEnd_toEndOf="@+id/axis_number_image"
+            app:layout_constraintStart_toStartOf="@+id/axis_number_image"
+            app:layout_constraintTop_toTopOf="@+id/axis_number_image"
+            tools:text="1" />
+
+        <TextView
+            android:id="@+id/flange_left_number_label"
+            style="@style/Widget.MeasurementDetail.WheelPairLabel"
+            android:layout_marginStart="8dp"
+            android:text="@string/edit_measurement_flange_left_number_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/axis_number_image" />
+
+        <TextView
+            android:id="@+id/flange_left_number_value"
+            style="@style/Widget.MeasurementDetail.WheelPairValue"
+            app:layout_constraintBottom_toBottomOf="@+id/flange_left_number_label"
+            app:layout_constraintStart_toEndOf="@id/flange_left_number_label"
+            app:layout_constraintTop_toTopOf="@+id/flange_left_number_label"
+            tools:text="12312412" />
+
+        <TextView
+            android:id="@+id/flange_right_number_label"
+            style="@style/Widget.MeasurementDetail.WheelPairLabel"
+            android:layout_marginEnd="8dp"
+            android:text="@string/edit_measurement_flange_right_number_label"
+            app:layout_constraintEnd_toStartOf="@id/flange_right_number_value"
+            app:layout_constraintTop_toBottomOf="@id/axis_number_image" />
+
+        <TextView
+            android:id="@+id/flange_right_number_value"
+            style="@style/Widget.MeasurementDetail.WheelPairValue"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/flange_right_number_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/flange_right_number_label"
+            tools:text="12312412" />
+
+        <LinearLayout
+            android:id="@+id/tuning_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/flange_left_number_label">
+
+            <TextView
+                android:id="@+id/tuning_label"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_weight="1"
+                android:background="@drawable/wheel_params"
+                android:gravity="center"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textAllCaps="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/flange_left_number_label"
+                tools:text="Обточить" />
+
+            <TextView
+                android:id="@+id/tuning_value"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_weight="3"
+                android:background="@drawable/wheel_params"
+                android:gravity="fill"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                app:layout_constraintStart_toEndOf="@id/tuning_label"
+                app:layout_constraintTop_toBottomOf="@id/flange_left_number_label"
+                tools:text="Обточка не требуется" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

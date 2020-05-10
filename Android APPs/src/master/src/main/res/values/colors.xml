@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff0000</color>
+    <color name="colorPrimaryDark">#1D1D1D</color>
+    <color name="colorAccent">#ff0000</color>
+    <color name="appWhite">#ffffff</color>
+    <color name="appRed">#ff0000</color>
+    <color name="appGreen">#029a02</color>
+    <color name="appBlack">#000000</color>
+    <color name="appTransparent">#00ffffff</color>
+
+
+    <color name="toolbarColor">#2C2C2C</color>
+    <color name="photoToolbar">#2C2C2C</color>
+    <color name="drawerToggleColor">#ffffff</color>
+    <color name="mainDividerColor">#d2d1d1</color>
+    <color name="grayFrameColor">#d2d1d1</color>
+
+    <color name="blueButton">#189cd5</color>
+
+    <!--AllActivity-->
+    <color name="activityBackground">#f0f0f0</color>
+
+    <!--SettingsActivity-->
+    <color name="settingsDivider">#f0f0f0</color>
+
+    <!--LocomotiveACtivity-->
+    <color name="selectedItem">#939393</color>
+
+    <!--MessageActivity-->
+    <color name="messageDivider">#f0f0f0</color>
+
+    <!--CommentActivity-->
+    <color name="commentToolbar">#2C2C2C</color>
+
+    <!--TmcList Activity-->
+    <color name="askedAmountColor">#80FFEB3B</color>
+    <color name="deleteBackground">#f5f5f5</color>
+
+    <!--Divide Activity -->
+    <color name="divideAvailablePercent">#ECBB39</color>
+    <color name="divideNotAvailablePercent">#D8D8D8</color>
+
+    <!--Count Item -->
+    <color name="countItem">#ECBB39</color>
+
+    <!--Group Assignment-->
+    <color name="green_progress">#A7D5A7</color>
+    <color name="red_progress">#EA9B9E</color>
+    <color name="yellow_progress">#F4E6A7</color>
+
+    <color name="ic_performance_filter_default">#c0c0c0</color>
+    <color name="ic_performance_filter_checked">#ffffff</color>
+    <color name="semitransparent_black">#4D000000</color>
+
+
+</resources>

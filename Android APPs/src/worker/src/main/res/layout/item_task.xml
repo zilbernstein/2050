@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/appWhite"
+    android:paddingLeft="16dp"
+    android:paddingTop="24dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="24dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/item_my_tasks_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:textColor="@color/appBlack"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:maxLines="3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/item_task_status"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Ремонт Тэд 0123" />
+
+    <TextView
+        android:id="@+id/repeats_count"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/ic_repeate"
+        android:gravity="center"
+        android:textColor="@color/appBlack"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/item_task_status"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="99" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/item_task_status"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/repeats_count" />
+
+    <TextView
+        android:id="@+id/workers"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/item_task_status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/workers_count"
+        tools:text="Новосад Я. И." />
+
+    <TextView
+        android:id="@+id/workers_count"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/ic_peoples"
+        android:gravity="center"
+        android:text="2"
+        android:textColor="@color/appWhite"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_task_status"
+        tools:text="2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

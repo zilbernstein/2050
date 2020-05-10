@@ -1,0 +1,33 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+apply from: '../build_shared_android_lib.gradle'
+apply from: '../build_shared_dependencies.gradle'
+
+dependencies {
+    //Dagger
+    depsDagger()
+    //Rx Kotlin
+    depsRxKotlin()
+    //Gson
+    depsGson()
+    //Test
+    depsTests()
+    //MapsStruct
+    depsMapStruct()
+    // AppCompat
+    depsAppCompat()
+    //UI
+    implementation project(':ui')
+    //Utils
+    implementation project(':utils')
+    //ThingWorx
+    api project(':thingworx')
+    // Core
+    implementation project(path: ':core')
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.github.volsahin:volx-recyclerview-fast-scroll:v1.0.8'
+
+}

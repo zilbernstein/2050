@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="68dp"
+    android:layout_marginStart="24dp"
+    android:layout_marginEnd="24dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/measure_list_item_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:background="@color/appWhite"
+            android:ellipsize="end"
+            android:gravity="start|center_vertical"
+            android:lines="2"
+            android:maxLines="2"
+            android:paddingStart="8dp"
+            android:textColor="@color/appBlack"
+            android:textSize="18sp"
+            tools:text="Высота путеочистителей Передний, мм" />
+
+        <TextView
+            android:id="@+id/measure_list_item_value"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@color/appWhite"
+            android:gravity="center"
+            android:textColor="@color/appBlack"
+            android:textSize="18sp"
+            tools:text="Точность: 0" />
+
+        <TextView
+            android:id="@+id/measure_list_item_normal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/appWhite"
+            android:gravity="center"
+            android:textColor="@color/appBlack"
+            android:textSize="18sp"
+            tools:text="100-150" />
+
+        <TextView
+            android:id="@+id/measure_list_item_type"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/appWhite"
+            android:gravity="center"
+            android:textColor="@color/appBlack"
+            android:textSize="18sp"
+            tools:text="Ручной" />
+
+        <TextView
+            android:id="@+id/measure_list_item_worker"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:background="@color/appWhite"
+            android:gravity="center"
+            android:textColor="@color/appBlack"
+            android:textSize="18sp"
+            tools:text="-" />
+
+        <TextView
+            android:id="@+id/measure_list_item_date"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/appWhite"
+            android:gravity="center"
+            android:textColor="@color/appBlack"
+            android:textSize="16sp"
+            tools:text="-" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <TextView
+                android:id="@+id/measure_list_item_no_comment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/appWhite"
+                android:gravity="center"
+                android:text="@string/measurement_value_false"
+                android:textColor="@color/appBlack"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/measure_list_item_view_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/appWhite"
+                android:src="@drawable/ic_eye_bk" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

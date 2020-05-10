@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Стиль Toolbar-->
+    <style name="ActionBarStyle">
+        <item name="android:background">@color/toolbarColor</item>
+    </style>
+
+    <!--Cтиль Aсешмшен-->
+    <style name="ActionBarTextStyle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:textColor">@color/appWhite</item>
+    </style>
+
+    <style name="Widget.App.Button.Green" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/bg_btn_green</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:minWidth">0dp</item>
+    </style>
+
+    <style name="Widget.App.Button.Red" parent="Widget.App.Button.Green">
+        <item name="android:background">@drawable/bg_btn_red</item>
+    </style>
+
+    <style name="PerformerSearchProgressBar" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/performer_search_green_progress_bar</item>
+        <item name="android:minHeight">32dp</item>
+        <item name="android:maxHeight">64dp</item>
+    </style>
+
+    <!--Сообщение об ошибке-->
+    <style name="Widget.App.TextView.NoData" parent="">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">#858585</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+</resources>

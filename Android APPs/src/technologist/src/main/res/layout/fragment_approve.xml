@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="16dp"
+    tools:background="@android:drawable/dialog_holo_light_frame">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/fragment_approve_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:textColor="@color/appBlack"
+            android:textSize="22sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Следующий список работ будет подтвержден" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fragment_approve_approved_recycler"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/fragment_approve_rejected_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_approve_title"
+            tools:listitem="@layout/item_approve_dialog" />
+
+        <Button
+            android:id="@+id/fragment_approve_rejected_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/button_red_text_background"
+            android:text="@string/approve_fragment_reject_btn"
+            android:textColor="@color/appWhite"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/fragment_approve_approved_button"
+            app:layout_constraintStart_toStartOf="@+id/fragment_approve_approved_recycler" />
+
+        <Button
+            android:id="@+id/fragment_approve_approved_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/button_text_background"
+            android:text="@string/approve_fragment_approve_btn"
+            android:textColor="@color/appWhite"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/fragment_approve_rejected_button"
+            app:layout_constraintEnd_toEndOf="@+id/fragment_approve_approved_recycler"
+            app:layout_constraintStart_toEndOf="@+id/fragment_approve_rejected_button"
+            app:layout_constraintTop_toTopOf="@id/fragment_approve_rejected_button" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

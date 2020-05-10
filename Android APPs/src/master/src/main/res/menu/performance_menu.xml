@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="AlwaysShowAction">
+    <item
+        android:id="@+id/tmc"
+        android:icon="@drawable/ic_performance_tmc"
+        android:orderInCategory="0"
+        android:title="@string/performance_filter_tmc"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/measurements"
+        android:icon="@drawable/ic_performance_measurements"
+        android:orderInCategory="0"
+        android:title="@string/performance_filter_measurements"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/mpi"
+        android:icon="@drawable/ic_performance_mpi"
+        android:orderInCategory="0"
+        android:title="@string/performance_filter_mpi"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/switch_equipment"
+        android:icon="@drawable/ic_switch_equipment"
+        android:iconTint="@color/appBlack"
+        android:title="@string/performance_activity_switch_equipment"
+        app:showAsAction="always" />
+</menu>

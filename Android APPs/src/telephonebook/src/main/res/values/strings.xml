@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">telephonebook</string>
+
+    <!--TelephoneBookActivity-->
+    <string name="telephone_book_activity">Телефонный справочник</string>
+    <string name="telephone_book_activity_title">Введите текст для поиска</string>
+</resources>

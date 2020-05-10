@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">ui</string>
+
+    <!--AuthorizationActivity-->
+    <string name="authoriztion_activity_password_length_error">Длина пароля должна быть не менее 4 символов</string>
+    <string name="authoriztion_activity_username_length_error">Длина имени пользователя должна быть не менее 4 символов</string>
+    <string name="authoriztion_activity_username_symbol_error">Имя пользователя может содеражть только буквы и цифры</string>
+    <string name="authoriztion_activity_password_symbol_error">Пароль может содержать только цифры</string>
+
+    <!--MainDrawerFragment-->
+    <string name="main_drawer_version">Версия: %1$s</string>
+    <string name="maximum_alert_count">99+</string>
+
+    <!--ProgressDialog-->
+    <string name="progress_dialog_waiting">Обмен данными с АСУ-СГ</string>
+
+    <!--BaseRtPermissionsDelegate-->
+    <string name="common_rt_permissions_rationale_light_continue">Продолжить</string>
+    <string name="common_rt_permissions_rationale_light_cancel">Отмена</string>
+    <string name="common_rt_permissions_rationale_hard_continue">Настройки</string>
+    <string name="common_rt_permissions_rationale_hard_cancel">Отмена</string>
+
+    <!--CameraRTPermissionDelegate-->
+    <string name="create_photo_permission_rationale_light">Необходимо разрешение на доступ к камере</string>
+    <string name="create_photo_permission_rationale_hard">Приложению запрещен доступ к камере.\nДобавьте разрешение в настройках приложения</string>
+
+    <!--CallPhoneRTPermissionDelegate-->
+    <string name="call_phone_permission_rationale_light">Необходимо разрешение на доступ к звонкам</string>
+    <string name="call_phone_permission_rationale_hard">Приложению запрещен доступ к звонкам.\nДобавьте разрешение в настройках приложения</string>
+
+    <!--AuthActivity-->
+    <string name="auth_activity_name">Имя пользователя</string>
+    <string name="auth_activity_password">Пароль</string>
+    <string name="auth_activity_login">Вход</string>
+    <string name="auth_activity_login_rzd">Вход РЖД</string>
+    <string name="auth_activity_auth_error">Пользователь с таким сочетанием имени и пароля не найден</string>
+
+    <!--Common-->
+    <string name="common_error">Произошла ошибка</string>
+    <string name="no_data">Нет данных</string>
+
+    <!--WorkaroundNoticeDialog-->
+    <string name="dialog_workaround_notice_text">ВНИМАНИЕ! \nРабота в статусе \"Обходное решение\" не будет\n отображаться в приложении. Подтвердить?</string>
+    <string name="dialog_workaround_notice_positive_btn">Да</string>
+    <string name="dialog_workaround_notice_negative_btn">Отмена</string>
+
+    <!--RepairTypesFilterDialog-->
+    <string name="dialog_repair_type_filter_cancel_btn">Сброс</string>
+    <string name="dialog_repair_type_filter_accept_btn">Применить</string>
+    <string name="dialog_repair_type_filter_title">Вид ремонта:</string>
+
+</resources>

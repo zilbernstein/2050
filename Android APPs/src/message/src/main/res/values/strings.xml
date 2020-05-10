@@ -1,0 +1,40 @@
+<resources>
+    <!--MessageActivity-->
+    <string name="message_activity_title">Сообщения</string>
+    <string name="message_activity_income">Входящие</string>
+    <string name="message_activity_outcome">Исходящие</string>
+    <string name="message_activity_whom">Кому:</string>
+    <string name="message_activity_from_whom">От кого:</string>
+    <string name="message_activity_send">Отправить</string>
+    <string name="message_activity_send_mistake">Не удалось отправить</string>
+    <string name="message_activity_read">Прочтено</string>
+    <string name="message_activity_delivered">Доставлено</string>
+
+     <!--NewMessageActivity-->
+    <string name="write_message_activity_title">Отправка сообщения</string>
+    <string name="write_message_activity_hint">Текст сообщения</string>
+    <string name="write_message_activity_addresee">Получатели:</string>
+    <string name="write_message_activity_addressee_add">Добавить</string>
+    <string name="write_message_activity_addressee_correct">Редактировать</string>
+
+    <!--ChooseAddreseeActivity-->
+    <string name="choose_addressee_title">Выберите адресата</string>
+    <string name="choose_addressee_add_addressee">Добавить адресата</string>
+
+    <!--MessageListActivity-->
+    <string name="message_list_activity_title">Сообщения</string>
+
+    <!--MessageDetailActivity-->
+    <string name="message_detail_activity_title">Сообщения</string>
+    <string name="message_detail_activity_resend">Повторить</string>
+
+    <!--DrawerView-->
+    <string name="main_drawer_message">Сообщения</string>
+
+    <!--WriteMessageActivity-->
+    <string name="write_message_activity_whome">Кому:</string>
+    <string name="wrtite_message_activity_empty_addressee_mistake">Необходимо заполнить адресата</string>
+    <string name="wrtite_message_activity_empty_message_mistake">Невозможно отправить пустое сообщение</string>
+    <string name="wrtite_message_activity_send_error_mistake">Невозможно отправить сообщение в тестовом приложении</string>
+    <string name="write_message_send_btn">Отправить</string>
+</resources>

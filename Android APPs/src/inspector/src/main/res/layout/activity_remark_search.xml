@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/include_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/appWhite"
+            android:elevation="2dp">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/activity_remark_search_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="64dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/gray_frame"
+                android:elevation="2dp"
+                android:gravity="center"
+                android:layout_marginRight="4dp"
+                app:layout_constraintEnd_toStartOf="@+id/activity_remark_search_add"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/activity_remark_search_add"
+                android:layout_width="48dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="64dp"
+                android:background="@drawable/green_btn_small_corners"
+                android:src="@drawable/icon_add"
+                app:layout_constraintBottom_toBottomOf="@+id/activity_remark_search_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/activity_remark_search_view"
+                app:layout_constraintTop_toTopOf="@+id/activity_remark_search_view" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/activity_remark_search_recycler_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="64dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="64dp"
+                android:background="@drawable/gray_frame"
+                android:elevation="2dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_remark_search_view" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/include_main_drawer" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

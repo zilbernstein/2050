@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">thingworx</string>
+
+    <!--SimpleApiUserErrorBuilder-->
+    <string name="simple_api_error_unknown">Ошибка сервера: Неизвестная ошибка</string>
+    <string name="simple_api_error">Ошибка сервера: %1$s</string>
+    <string name="timeout_error">Ошибка сервера: Не удалось дождаться ответа от сервера</string>
+    <string name="wrong_data_error">Ошибка сервера: Получены некорректные данные с сервера</string>
+    <string name="connection_error">Не удалось подключиться к серверу</string>
+    <string name="wrong_role_user">У пользователя нет доступа в приложение</string>
+    <string name="wrong_user_password">Проверьте логин, пароль и подключение к серверу</string>
+</resources>

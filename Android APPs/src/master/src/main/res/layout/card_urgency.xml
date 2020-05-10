@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/repeats_count"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:background="@drawable/ic_repeate"
+            android:textColor="@color/appBlack"
+            android:textSize="12sp"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintBottom_toTopOf="@id/card_urgency_remark_status_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="99" />
+
+        <View
+            android:id="@+id/card_urgency_remark_status_view"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/card_urgency_title"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/repeats_count"
+            tools:background="@drawable/ic_icon_check_circle_green" />
+
+        <TextView
+            android:id="@+id/card_urgency_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:minHeight="68dp"
+            android:padding="16dp"
+            android:textAllCaps="true"
+            android:textColor="@color/appBlack"
+            android:textSize="14sp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toRightOf="@+id/card_urgency_remark_status_view"
+            app:layout_constraintRight_toLeftOf="@+id/card_urgency_menu"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="ТРЕЩИНА НА КОЖУХЕ" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/card_urgency_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_icon_more" />
+
+        <View
+            android:id="@+id/up_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/mainDividerColor"
+            app:layout_constraintTop_toBottomOf="@+id/card_urgency_title"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <TextView
+            android:id="@+id/card_measure_value"
+            style="@style/ItemLocomotiveTextStyle"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="56dp"
+            android:textColor="@color/appBlack"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/up_divider"
+            tools:text="Замеры 20/20/20" />
+
+        <TextView
+            android:id="@+id/card_urgency_time"
+            style="@style/ItemLocomotiveTextStyle"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:textColor="@color/appBlack"
+            app:layout_constraintStart_toEndOf="@+id/card_measure_value"
+            app:layout_constraintEnd_toStartOf="@+id/card_urgency_time_remain"
+            app:layout_constraintTop_toBottomOf="@id/up_divider"
+            tools:text="Норма: 01:15:15 (выделено 50%)" />
+
+        <TextView
+            android:id="@+id/card_urgency_time_remain"
+            style="@style/ItemLocomotiveTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:textColor="@color/appBlack"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@id/card_urgency_equipment_number"
+            app:layout_constraintStart_toEndOf="@id/card_urgency_time"
+            app:layout_constraintTop_toBottomOf="@id/up_divider"
+            tools:text="00:00:00 / 00:00:00" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/card_urgency_equipment_number"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/appBlack"
+            android:gravity="center"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/up_divider"
+            tools:text="Локомотив/секция:" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/item_locomotive_details_remark_work_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="up_divider, card_urgency_equipment_number" />
+
+        <View
+            android:id="@+id/performer_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/mainDividerColor"
+            app:layout_constraintTop_toBottomOf="@+id/card_urgency_equipment_number"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <TextView
+            android:id="@+id/performers_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textColor="@color/appBlack"
+            android:textSize="24sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="@+id/card_urgency_first_performer"
+            app:layout_constraintEnd_toStartOf="@+id/card_urgency_first_performer"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/card_urgency_first_performer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/name_text_background"
+            android:padding="8dp"
+            android:textColor="@color/appBlack"
+            app:layout_constraintEnd_toStartOf="@id/card_urgency_second_performer"
+            app:layout_constraintTop_toBottomOf="@+id/performer_divider"
+            app:layout_constraintStart_toEndOf="@id/performers_title"
+            tools:text="Слуцкий А.В." />
+
+        <TextView
+            android:id="@+id/card_urgency_second_performer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/name_text_background"
+            android:layout_marginEnd="8dp"
+            android:padding="8dp"
+            android:textColor="@color/appBlack"
+            app:layout_constraintEnd_toStartOf="@id/card_urgency_third_performer"
+            app:layout_constraintLeft_toRightOf="@id/card_urgency_first_performer"
+            app:layout_constraintTop_toTopOf="@id/card_urgency_first_performer"
+            tools:text="Слуцкий А.В." />
+
+        <TextView
+            android:id="@+id/card_urgency_third_performer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/name_text_background"
+            android:padding="8dp"
+            android:textColor="@color/appBlack"
+            app:layout_constraintEnd_toStartOf="@id/card_urgency_amount_performer"
+            app:layout_constraintLeft_toRightOf="@id/card_urgency_second_performer"
+            app:layout_constraintTop_toTopOf="@id/card_urgency_first_performer"
+            tools:text="Слуцкий А.В." />
+
+        <TextView
+            android:id="@+id/card_urgency_amount_performer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/name_text_background"
+            android:padding="8dp"
+            android:textColor="@color/appBlack"
+            app:layout_constraintLeft_toRightOf="@id/card_urgency_third_performer"
+            app:layout_constraintTop_toTopOf="@id/card_urgency_first_performer"
+            tools:text="+ 5 чел" />
+
+        <Button
+            android:id="@+id/card_urgency_first_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="4dp"
+            android:minWidth="192dp"
+            android:textAllCaps="false"
+            android:textColor="@color/appWhite"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/card_urgency_second_button"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintTop_toBottomOf="@+id/performer_divider"
+            tools:background="@drawable/green_btn"
+            tools:text="@string/urgent_activity_restart" />
+
+        <Button
+            android:id="@+id/card_urgency_second_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:minWidth="192dp"
+            android:textAllCaps="false"
+            android:textColor="@color/appWhite"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/performer_divider"
+            tools:background="@drawable/green_btn"
+            tools:text="@string/urgent_activity_restart" />
+
+        <View
+            android:id="@+id/comment_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="84dp"
+            android:background="@color/mainDividerColor"
+            app:layout_constraintTop_toBottomOf="@+id/performer_divider" />
+
+        <ImageView
+            android:id="@+id/card_urgency_remark_comment_image"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/comment_divider"
+            app:srcCompat="@drawable/ic_message" />
+
+        <com.ms.square.android.expandabletextview.ExpandableTextView
+            android:id="@+id/card_urgency_details_remark_comment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintLeft_toRightOf="@+id/card_urgency_remark_comment_image"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/comment_divider"
+            expandableTextView:animDuration="200"
+            expandableTextView:maxCollapsedLines="1">
+
+            <TextView
+                android:id="@id/expandable_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/appBlack"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@id/expand_collapse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:background="@android:color/transparent"
+                android:padding="16dp" />
+        </com.ms.square.android.expandabletextview.ExpandableTextView>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/card_urgency_remark_comment_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="comment_divider, card_urgency_details_remark_comment, card_urgency_remark_comment_image" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

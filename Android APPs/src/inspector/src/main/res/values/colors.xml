@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff0000</color>
+    <color name="colorPrimaryDark">#1D1D1D</color>
+    <color name="colorAccent">#ff0000</color>
+    <color name="appBlue">#1d6887</color>
+    <!--Inspection Activity-->
+    <color name="remarkBackground">#f7f7f7</color>
+    <!--CommentActivity-->
+    <color name="commentToolbar">#2C2C2C</color>
+    <!--PhotoToolbar-->
+    <color name="photoToolbar">#2C2C2C</color>
+</resources>

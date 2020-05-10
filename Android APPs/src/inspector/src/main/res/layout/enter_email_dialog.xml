@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="512dp"
+    android:paddingBottom="32dp"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    tools:ignore="SpUsage">
+
+
+    <TextView
+        android:id="@+id/message_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:paddingTop="22dp"
+        android:text="@string/enter_email_title"
+        android:textColor="@color/appBlack"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:paddingBottom="16dp"
+        android:textSize="16dp"
+        android:paddingRight="32dp"
+        android:textCursorDrawable = "@null"
+        app:layout_constraintEnd_toEndOf="@id/send"
+        app:layout_constraintStart_toStartOf="@id/cancel"
+        app:layout_constraintTop_toBottomOf="@id/message_title"
+        android:backgroundTint="@color/appGray"
+        tools:text="Kashonkov@gmail.com" />
+
+    <ImageView
+        android:id="@+id/clear_email"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:srcCompat="@drawable/ic_icon_clear_email"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="@id/message"
+        app:layout_constraintEnd_toEndOf="@id/message"
+        app:layout_constraintTop_toTopOf="@id/message"/>
+
+    <android.widget.Button
+        android:id="@+id/cancel"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="64dp"
+        android:background="@drawable/gray_btn"
+        android:text="@string/enter_email_cancel"
+        android:textAllCaps="true"
+        android:textColor="@color/appWhite"
+        app:layout_constraintTop_toBottomOf="@id/message"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <android.widget.Button
+        android:id="@+id/send"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="64dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/green_button_state"
+        android:text="@string/enter_email_send"
+        android:textAllCaps="true"
+        android:enabled="false"
+        android:textColor="@color/appWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/message"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

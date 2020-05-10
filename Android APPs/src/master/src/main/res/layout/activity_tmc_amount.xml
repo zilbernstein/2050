@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbarColor"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_toolbar_back" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbarColor"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:textColor="@color/appWhite"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@id/back_button"
+        app:layout_constraintRight_toLeftOf="@id/check_button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/check_button"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbarColor"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_check" />
+
+    <EditText
+        android:id="@+id/edit_amount"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/tmc_edit_background"
+        android:digits="0123456789."
+        android:elevation="2dp"
+        android:ellipsize="end"
+        android:gravity="start|center_vertical"
+        android:hint="@string/tmc_amount_hint"
+        android:inputType="numberDecimal"
+        android:maxLines="1"
+        android:paddingLeft="8dp"
+        android:paddingRight="48dp"
+        android:textColor="@color/appBlack"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@id/start_guideline"
+        app:layout_constraintRight_toLeftOf="@id/uom_guideline"
+        app:layout_constraintTop_toBottomOf="@id/section_title" />
+
+    <ImageView
+        android:id="@+id/clear_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:elevation="2dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/edit_amount"
+        app:layout_constraintRight_toRightOf="@id/edit_amount"
+        app:layout_constraintTop_toTopOf="@id/edit_amount"
+        app:srcCompat="@drawable/ic_search_close" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/uom_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <TextView
+        android:id="@+id/uom_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal|bottom"
+        android:text="@string/uom"
+        android:textColor="@color/appBlack"
+        app:layout_constraintLeft_toRightOf="@id/uom_guideline"
+        app:layout_constraintBottom_toBottomOf="@id/stock_title"
+        app:layout_constraintRight_toLeftOf="@id/section_guideline"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <TextView
+        android:id="@+id/uom_value"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/tmc_edit_background"
+        android:elevation="2dp"
+        android:gravity="center"
+        android:textColor="@color/appBlack"
+        app:layout_constraintBottom_toBottomOf="@id/edit_amount"
+        app:layout_constraintLeft_toRightOf="@id/uom_guideline"
+        app:layout_constraintRight_toLeftOf="@id/section_guideline"
+        app:layout_constraintTop_toTopOf="@id/edit_amount" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/section_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.79" />
+
+    <TextView
+        android:id="@+id/section_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/tmc_amount_section"
+        android:textColor="@color/appBlack"
+        app:layout_constraintLeft_toRightOf="@id/section_guideline"
+        app:layout_constraintRight_toLeftOf="@id/stock_guideline"
+        app:layout_constraintBottom_toBottomOf="@id/stock_title"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <TextView
+        android:id="@+id/section_value"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="1dp"
+        android:background="@drawable/tmc_left_corner_background"
+        android:elevation="2dp"
+        android:gravity="center"
+        android:textColor="@color/appBlack"
+        app:layout_constraintBottom_toBottomOf="@id/edit_amount"
+        app:layout_constraintLeft_toRightOf="@id/section_guideline"
+        app:layout_constraintRight_toLeftOf="@id/stock_guideline"
+        app:layout_constraintTop_toTopOf="@id/edit_amount" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/stock_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.89" />
+
+    <TextView
+        android:id="@+id/stock_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="@string/tmc_amount_stock"
+        android:textColor="@color/appBlack"
+        app:layout_constraintBottom_toTopOf="@+id/stock_value"
+        app:layout_constraintLeft_toRightOf="@id/stock_guideline"
+        app:layout_constraintRight_toLeftOf="@id/end_guideline"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <TextView
+        android:id="@+id/stock_value"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/tmc_right_corner_background"
+        android:elevation="2dp"
+        android:gravity="center"
+        android:textColor="@color/appBlack"
+        app:layout_constraintBottom_toBottomOf="@id/edit_amount"
+        app:layout_constraintLeft_toRightOf="@id/stock_guideline"
+        app:layout_constraintRight_toLeftOf="@id/end_guideline"
+        app:layout_constraintTop_toTopOf="@id/edit_amount" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/end_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.99" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,80 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'ru.digipeople.versioning.androiddefault'
+
+apply from: '../build_shared_android_app.gradle'
+apply from: '../build_shared_dependencies.gradle'
+
+versioning {
+    appName = "worker"
+}
+
+android {
+    defaultConfig {
+        applicationId "ru.digipeople.locotech.worker"
+        // Константы
+        buildConfigField('String', 'THINGWORX_LIBRARY', "\"2050UserLibrary\"")
+        buildConfigField('String', 'MASHUP', "\"BIC_WorkerMashup\"")
+    }
+
+    flavorDimensions "target"
+    productFlavors {
+        dev {
+            // Ресурсы
+            resValue "string", "app_name", "Сотрудник dev"
+            buildConfigField("String", "APP_CENTER_SECRET", "\"e83d4075-7915-44e9-8712-060daaab0fe3\"")
+        }
+
+        beta {
+            // Ресурсы
+            resValue "string", "app_name", "Сотрудник β"
+            buildConfigField("String", "APP_CENTER_SECRET", "\"4ee95991-11a9-4192-8bbb-32ede9fd9a41\"")
+        }
+
+        prod {
+            // Ресурсы
+            resValue "string", "app_name", "Сотрудник"
+            buildConfigField("String", "APP_CENTER_SECRET", "\"16302c46-37bf-402e-a6e8-1c13c979d4b4\"")
+        }
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+}
+
+dependencies {
+    //Arch
+    depsArch()
+    // Dagger
+    depsDagger()
+    // Rx Kotlin
+    depsRxKotlin()
+    // MapsStruct
+    depsMapStruct()
+    // Tests
+    depsTests()
+    // AppCenter
+    depsAppCenter()
+    // AppCompat
+    depsAppCompat()
+    // Core
+    implementation project(':core')
+    // UI
+    api project(':ui')
+    // Message
+    implementation project(":message")
+    // TelephoneBook
+    implementation project(':telephonebook')
+    // Photo
+    implementation project(':photo')
+    // Utils
+    implementation project(':utils')
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+}
+
+apply plugin: 'com.google.gms.google-services'
+

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/info_group"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
+    android:paddingBottom="8dp">
+
+    <TextView
+        android:id="@+id/section_label"
+        style="@style/Widget.MeasurementDetail.Label"
+        android:text="@string/edit_measurement_section_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/section_value"
+        style="@style/Widget.MeasurementDetail.Value"
+        app:layout_constraintBottom_toBottomOf="@+id/section_label"
+        app:layout_constraintStart_toEndOf="@id/section_label"
+        app:layout_constraintTop_toTopOf="@+id/section_label"
+        tools:text="264A" />
+
+    <TextView
+        android:id="@+id/type_name"
+        style="@style/Widget.MeasurementDetail.Label"
+        android:text="@string/edit_measurement_type_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/section_label" />
+
+    <TextView
+        android:id="@+id/type_value"
+        style="@style/Widget.MeasurementDetail.Value"
+        app:layout_constraintBottom_toTopOf="@+id/kind_name"
+        app:layout_constraintStart_toEndOf="@id/type_name"
+        app:layout_constraintTop_toBottomOf="@id/section_label"
+        tools:text="обточка КП" />
+
+    <TextView
+        android:id="@+id/kind_name"
+        style="@style/Widget.MeasurementDetail.Label"
+        android:text="@string/edit_measurement_kind_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/type_name" />
+
+    <TextView
+        android:id="@+id/kind_value"
+        style="@style/Widget.MeasurementDetail.Value"
+        app:layout_constraintBottom_toTopOf="@+id/measurement_name"
+        app:layout_constraintStart_toEndOf="@id/kind_name"
+        app:layout_constraintTop_toBottomOf="@id/type_name"
+        tools:text="до обточки" />
+
+    <TextView
+        android:id="@+id/measurement_name"
+        style="@style/Widget.MeasurementDetail.Label"
+        android:text="@string/edit_measurement_measurement_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kind_name" />
+
+    <TextView
+        android:id="@+id/measurement_value"
+        style="@style/Widget.MeasurementDetail.Value"
+        app:layout_constraintBottom_toTopOf="@+id/source_name"
+        app:layout_constraintStart_toEndOf="@id/measurement_name"
+        app:layout_constraintTop_toBottomOf="@id/kind_name"
+        tools:text="ручной" />
+
+    <TextView
+        android:id="@+id/source_name"
+        style="@style/Widget.MeasurementDetail.Label"
+        android:text="@string/edit_measurement_source_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/measurement_name" />
+
+    <TextView
+        android:id="@+id/source_value"
+        style="@style/Widget.MeasurementDetail.Value"
+        app:layout_constraintBottom_toTopOf="@+id/worker_name"
+        app:layout_constraintStart_toEndOf="@id/source_name"
+        app:layout_constraintTop_toBottomOf="@id/measurement_name"
+        tools:text="техник по замерам" />
+
+    <TextView
+        android:id="@+id/worker_name"
+        style="@style/Widget.MeasurementDetail.Label"
+        android:text="@string/edit_measurement_worker_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/source_name" />
+
+    <TextView
+        android:id="@+id/worker_value"
+        style="@style/Widget.MeasurementDetail.Value"
+        app:layout_constraintBottom_toTopOf="@+id/date_time_name"
+        app:layout_constraintStart_toEndOf="@id/worker_name"
+        app:layout_constraintTop_toBottomOf="@id/source_name"
+        tools:text="Иванов И.И." />
+
+    <TextView
+        android:id="@+id/date_time_name"
+        style="@style/Widget.MeasurementDetail.Label"
+        android:text="@string/edit_measurement_date_time_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/worker_name" />
+
+    <TextView
+        android:id="@+id/date_time_value"
+        style="@style/Widget.MeasurementDetail.Value"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/date_time_name"
+        tools:text="14.08.2019 / 15:03" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

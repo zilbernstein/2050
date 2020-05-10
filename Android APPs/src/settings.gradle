@@ -1,0 +1,1 @@
+include ':master', ':thingworx', ':ui', ':telephonebook', ':technologist', ':message', ':worker', ':photo', ':qrscanner', ':inspector', ':metrologist', ':core', 'utils'

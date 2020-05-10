@@ -1,0 +1,106 @@
+<resources>
+    <!--MainDrawerFragment-->
+    <string name="main_drawer_sld_name">СЛД Братское</string>
+    <string name="main_drawer_sections_item">Секции</string>
+    <string name="main_drawer_section_not_selected">Не выбрано</string>
+    <string name="main_drawer_measurements_item">Замеры</string>
+    <string name="main_drawer_reports_item">Отчеты</string>
+    <string name="main_drawer_messages_item">Сообщения</string>
+    <string name="main_drawer_phones_item">Справочник сотрудников</string>
+    <string name="main_drawer_exit_item">Выход</string>
+    <string name="main_drawer_logo_title">Замеры КП</string>
+    <string name="main_drawer_user_name">%1$s %2$s</string>
+
+    <!--SectionsActivity-->
+    <string name="sections_title">Секции</string>
+    <string name="sections_section_title">Секция %1$s</string>
+    <string name="sections_locomotive_title">Локомотив %1$s / %2$s</string>
+    <string name="sections_locomotive_title_without_name">Локомотив %1$s</string>
+    <string name="section_section_number">%1$s</string>
+
+    <!--MeasurementDetailActivity-->
+    <string name="measurement_detail_title">Просмотр замера</string>
+    <string name="measurement_detail_save">Сохранить</string>
+    <string name="measurement_detail_attention">Внимание</string>
+    <string name="measurement_detail_set_manual_mode_warning">Смена замера на ручной ввод приведет к перезаписыванию данных</string>
+    <string name="measurement_detail_change_profilometer_warning">Смена профилометра приведет к перезаписыванию данных</string>
+    <string name="measurement_detail_wheel_param_yes">Да</string>
+    <string name="measurement_detail_wheel_param_no">Нет</string>
+    <string name="measurement_detail_wheel_param_null">Не выбрано</string>
+
+    <!--MeasurementWheelPairsActivity-->
+    <string name="measurement_wheel_pairs_title">Ввод данных замера</string>
+    <string name="measurement_wheel_pairs_save">Сохранить</string>
+    <string name="measurement_wheel_number_wheel">Номер оси:</string>
+    <string name="measurement_wheel_flange_left_number_label">Номер бандажа ЛВ:</string>
+    <string name="measurement_wheel_flange_right_number_label">Номер бандажа ПР:</string>
+    <string name="measurement_wheel_tuning_handmade">Обточить</string>
+    <string name="measurement_wheel_reason_label">Причина:</string>
+    <string name="measurement_wheel_no_reason">Нет</string>
+    <string name="measurement_wheel_edit_btn">Редактировать</string>
+    <string name="measurement_wheel_parametr">Параметр</string>
+    <string name="measurement_wheel_lv">ЛВ</string>
+    <string name="measurement_wheel_pr">ПР</string>
+    <string name="measurement_wheel_norm">Норм</string>
+    <string name="measurement_wheel_min">Мин</string>
+    <string name="measurement_wheel_max">Макс</string>
+    <string name="measurement_wheel_pair_number">КП %1$s</string>
+    <string name="measurement_wheel_attention">Внимание</string>
+
+    <!--MeasurementTypesActivity-->
+    <string name="measurement_types_title">Виды замеров</string>
+    <string name="measurement_types_attention">Внимание</string>
+    <string name="measurement_types_section_name">Секция %1$s</string>
+
+    <!--TuningReasonsActivity-->
+    <string name="tuning_reasons_title">Причина обточки</string>
+
+    <!--ProfilometersActivity-->
+    <string name="profilometers_title">Профилометры</string>
+    <string name="profilometers_list_item">Измерение №%1$s от %2$s</string>
+
+    <!--ReportsActivity-->
+    <string name="reports_title">Отчеты</string>
+    <string name="reports_send_email">Отправить e-mail</string>
+    <string name="reports_invalid_email">Некорректный E-mail</string>
+
+    <!--EditMeasurementActivity-->
+    <string name="edit_measurement_title">Редактирование данных по кп</string>
+    <string name="edit_measurement_section_name">Секция:</string>
+    <string name="edit_measurement_sld_name">СЛД:</string>
+    <string name="edit_measurement_type_name">Тип замера:</string>
+    <string name="edit_measurement_kind_name">Вид замера:</string>
+    <string name="edit_measurement_measurement_name">Замер:</string>
+    <string name="edit_measurement_source_name">Источник:</string>
+    <string name="edit_measurement_worker_name">Техник:</string>
+    <string name="edit_measurement_date_time_name">Дата и время:</string>
+    <string name="edit_measurement_number_wheel">Номер оси:</string>
+    <string name="edit_measurement_flange_left_number_label">Номер бандажа ЛВ:</string>
+    <string name="edit_measurement_flange_right_number_label">Номер бандажа ПР:</string>
+    <string name="edit_measurement_save">Сохранить</string>
+
+    <!--MeasurementConfirmationActivity-->
+    <string name="measurement_confirmation_title">Замечания</string>
+    <string name="measurement_confirmation_save">Сохранить</string>
+    <string name="measurement_confirmation_remarks_title">Замечания (АСУ СГ)</string>
+    <string name="measurement_confirmation_no_remarks">Замечаний нет</string>
+    <string name="measurement_confirmation_author_label">Автор</string>
+    <string name="measurement_confirmation_source_label">Источник</string>
+    <string name="measurement_confirmation_equipment_label">Оборудование</string>
+    <string name="measurement_confirmation_date_label">Дата</string>
+    <string name="measurement_confirmation_info_title">Информация о замере</string>
+    <string name="measurement_confirmation_manual_measurement">ручной</string>
+    <string name="measurement_confirmation_manual_source">техник по замерам</string>
+    <string name="measurement_confirmation_not_manual_measurement">профилометр</string>
+    <string name="measurement_confirmation_not_manual_source">приборный</string>
+    <string name="measurement_confirmation_turning_required">Обточить</string>
+    <string name="measurement_confirmation_turning_not_required">Норма</string>
+    <string name="measurement_confirmation_wheel_pair_number">КП %1$s</string>
+    <string name="measurement_conformation_tuning_not_required">Обточка не требуется</string>
+
+    <string name="sections_repair_types_filter">Виды ремонта</string>
+
+    <string name="section_repair_type">(%s)</string>
+
+</resources>
+

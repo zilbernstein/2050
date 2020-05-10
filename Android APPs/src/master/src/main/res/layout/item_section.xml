@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_section"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:background="@color/appWhite">
+
+    <View
+        android:id="@+id/section_view_dot"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginStart="32dp"
+        android:background="@drawable/red_dot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/section_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:maxLength="30"
+        android:maxLines="1"
+        android:textSize="10pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/section_repair_type"
+        app:layout_constraintStart_toEndOf="@+id/section_view_dot"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Секция 1/16 длинная" />
+
+    <TextView
+        android:id="@+id/section_repair_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="7pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/left_guidline"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="(Деповский)" />
+
+    <TextView
+        android:id="@+id/section_works_count"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/right_guidline"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintStart_toStartOf="@+id/left_guidline"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="24/24/48/244/122/566" />
+
+    <LinearLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/right_guidline"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/first_health_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            tools:background="@drawable/red_round"
+            tools:src="@drawable/mat" />
+
+        <ImageView
+            android:id="@+id/second_health_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            tools:background="@drawable/green_round"
+            tools:src="@drawable/ob" />
+
+        <ImageView
+            android:id="@+id/third_health_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:scaleType="center"
+            tools:background="@drawable/green_round"
+            tools:src="@drawable/pers" />
+
+        <ImageView
+            android:id="@+id/fourth_health_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:scaleType="center"
+            tools:background="@drawable/green_round"
+            tools:src="@drawable/others" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/section_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/appBlack"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout"
+        tools:text="ТО1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/left_guidline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/right_guidline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.55" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
